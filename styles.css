@@ -5,6 +5,22 @@
   margin: 20px 100px;
 }
 
+.contact-btn {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.36px;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.contact-btn:hover {
+  color: #D5896F;
+}
+
 h1 {
   font-family: "DM Sans", sans-serif;
   font-size: 23.85px;
@@ -28,5 +44,10 @@ nav li {
   font-family: "Inter", sans-serif;
   font-size: 18px;
   list-style-type: none;
-  display: inline;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+nav li:hover {
+  color: #D5896F;
 }/*# sourceMappingURL=styles.css.map */
