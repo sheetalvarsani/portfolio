@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 100px;
+}
+
+h1 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 23.85px;
+  font-weight: 700;
+  line-height: 25.11px;
+}
+
+nav {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  gap: 80px;
+}
+
+nav li {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  list-style-type: none;
+  display: inline;
+}/*# sourceMappingURL=styles.css.map */
