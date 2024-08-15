@@ -1,3 +1,6 @@
+@import './button.scss';
+@import './palette.scss';
+
 $font-family-primary: 'Inter', sans-serif;
 $font-size-primary: 18px;
 
@@ -8,13 +11,15 @@ $font-size-primary: 18px;
     margin: 20px 100px;
 }
 
+.contact-btn {
+    @include button-style($orange)
+}
+
 h1 {
     font-family: 'DM Sans', sans-serif;
     font-size: 23.85px;
     font-weight: 700;
     line-height: 25.11px;
-
-
 }
 
 nav {
@@ -34,6 +39,12 @@ nav li {
     font-family: $font-family-primary;
     font-size: $font-size-primary;
     list-style-type: none;
-    display: inline;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+        color: $orange;
+      }
 }
 
