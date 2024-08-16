@@ -18,25 +18,21 @@ $font-size-primary: 18px;
 .intro-grid-container {
     display: grid;
     grid-template-columns: 60% 40%;
-    // gap: 20px;
-    // row-gap: 10px;
     grid-template-areas:
         "intro-container-name intro-container-image"
         "intro-container-summary intro-container-image";
-    margin: 10rem 20rem;
+    margin: 10rem 22rem;
     align-content: center;
     text-align: center;
-    
 }
+
 .intro-container-name {
     display: flex;
     grid-area: intro-container-name;
     font-size: 32px;
     font-weight: 500;
     line-height: 38.73px;
-    // text-align: left;
     align-items: center;
-    // justify-content: center;
 }
 
 .intro-container-summary {
@@ -47,8 +43,6 @@ $font-size-primary: 18px;
     line-height: 76.8px;
     text-align: left;
     align-items: center;
-    // justify-content: center;
-
 }
 
 .intro-container-image {
@@ -59,11 +53,55 @@ $font-size-primary: 18px;
     padding: 0 30px;
 }
 
+.about-section {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 10rem 18rem;
+    align-content: center;
+    text-align: center;
+}
+
+.about-title {
+    display: flex;
+    align-items: center;
+}
+
+.about-para {
+    display: flex;
+    text-align: left;
+    align-items: center;
+}
+
+#columnOne {
+    margin: 0 5rem;
+    margin-bottom: 5rem;
+    padding-left: 60px;
+    align-content: center;
+    // text-align: center;
+}
+
+.about-image-container {
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+}
+.about-image-container img {
+    width: 400px;
+    border-radius: 15px;
+}
+
 h1 {
     font-family: "DM Sans", sans-serif;
     font-size: 23.85px;
     font-weight: 700;
     line-height: 25.11px;
+}
+
+h2 {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 58.09px;
+    text-align: left;
 }
 
 nav {
@@ -93,4 +131,5 @@ nav li {
 
 main {
     font-family: $font-family-primary;
+    font-size: $font-size-primary;
 }
