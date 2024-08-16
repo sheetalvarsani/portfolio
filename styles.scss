@@ -1,7 +1,7 @@
-@import './button.scss';
-@import './palette.scss';
+@import "./button.scss";
+@import "./palette.scss";
 
-$font-family-primary: 'Inter', sans-serif;
+$font-family-primary: "Inter", sans-serif;
 $font-size-primary: 18px;
 
 .header {
@@ -12,11 +12,55 @@ $font-size-primary: 18px;
 }
 
 .contact-btn {
-    @include button-style($orange)
+    @include button-style($orange);
+}
+
+.intro-grid-container {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    // gap: 20px;
+    // row-gap: 10px;
+    grid-template-areas:
+        "intro-container-name intro-container-image"
+        "intro-container-summary intro-container-image";
+    margin: 10rem 20rem;
+    align-content: center;
+    text-align: center;
+    
+}
+.intro-container-name {
+    display: flex;
+    grid-area: intro-container-name;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 38.73px;
+    // text-align: left;
+    align-items: center;
+    // justify-content: center;
+}
+
+.intro-container-summary {
+    display: flex;
+    grid-area: intro-container-summary;
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 76.8px;
+    text-align: left;
+    align-items: center;
+    // justify-content: center;
+
+}
+
+.intro-container-image {
+    display: flex;
+    grid-area: intro-container-image;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
 }
 
 h1 {
-    font-family: 'DM Sans', sans-serif;
+    font-family: "DM Sans", sans-serif;
     font-size: 23.85px;
     font-weight: 700;
     line-height: 25.11px;
@@ -27,7 +71,6 @@ nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-
 }
 
 nav ul {
@@ -45,6 +88,9 @@ nav li {
 
     &:hover {
         color: $orange;
-      }
+    }
 }
 
+main {
+    font-family: $font-family-primary;
+}
