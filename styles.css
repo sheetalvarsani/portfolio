@@ -250,14 +250,23 @@ nav li:hover {
   color: #D5896F;
 }
 
+nav a {
+  text-decoration: none;
+}
+
+nav a:visited {
+  color: inherit;
+}
+
 main {
   font-family: "Inter", sans-serif;
   font-size: 18px;
 }
 
 footer {
-  background-color: #657153;
+  background-color: black;
   font-family: "Inter", sans-serif;
+  font-weight: 400;
   color: white;
   padding: 30px 180px;
   margin-top: 120px;
