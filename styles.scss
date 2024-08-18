@@ -2,11 +2,12 @@
 @import "./palette.scss";
 @import "./media.scss";
 
-$font-family-primary: "Inter", sans-serif;
+$font-family-primary: "DM Sans", sans-serif;
 $font-size-primary: 1rem;
+$font-color-primary: black;
 
 h1 {
-    font-family: "DM Sans", sans-serif;
+    font-family: $font-family-primary;
     font-size: 1.2rem;
     font-weight: 700;
 }
@@ -15,15 +16,31 @@ h2 {
     font-size: 3rem;
     font-weight: 600;
     text-align: center;
+
+    @include mobile {
+        font-size: 2rem;
+    }
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
 }
 
 main {
     font-family: $font-family-primary;
     font-size: $font-size-primary;
+    color: $font-color-primary;
+
+    @include mobile {
+        margin: 2rem;
+    }
 }
 
 body {
     width: 100%;
+    margin: 0px;
 }
 
 // ---------- HEADER / NAV BAR ----------
@@ -42,7 +59,7 @@ nav ul {
 
 nav li {
     font-family: $font-family-primary;
-    font-size: $font-size-primary;
+    font-size: 1rem;
     list-style-type: none;
     display: flex;
     align-items: center;
@@ -55,7 +72,8 @@ nav li {
 
 nav a {
     text-decoration: none;
-    // color: inherit;
+    color: inherit;
+    font-weight: 600;
 }
 
 nav a:visited {
@@ -66,10 +84,10 @@ nav a:visited {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 1rem 8rem;
+    margin: 1rem 2rem;
 
     @include mobile {
-        visibility: hidden;
+        display: none;
     }
 }
 
@@ -82,7 +100,7 @@ nav a:visited {
 .intro-grid-container {
     display: grid;
     grid-gap: 2rem;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: minmax(0, 60%) minmax(0, 40%);
     grid-template-areas:
         "intro-container-name intro-container-image"
         "intro-container-summary intro-container-image";
@@ -90,25 +108,36 @@ nav a:visited {
     margin: 10rem 20rem;
     align-content: center;
     text-align: center;
+    overflow: hidden;
+
+    @include mobile {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "intro-container-name"
+            "intro-container-summary";
+        margin: 0;
+        grid-gap: 1rem;
+            width: 100%;
+        
+        }
+    
 
     @include tablet {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: minmax(0, 60%) minmax(0, 40%);
         grid-template-areas:
             "intro-container-name intro-container-image"
             "intro-container-summary intro-container-image";
-
-        margin: 5rem 2rem;
-        grid-gap: 2rem;
+        margin: 0 5%;
+        grid-gap: 1rem;
     }
 
+}
+
+.intro-grid-container img {
+    max-width: 100%;
+    height: auto;
     @include mobile {
-        grid-template-columns: 1fr; // Switch to a single-column layout
-        grid-template-areas:
-            "intro-container-name"
-            "intro-container-image"
-            "intro-container-summary";
-        margin: 2rem 1rem; // Adjust margins for mobile
-        grid-gap: 1.5rem;
+        display: none;
     }
 }
 
@@ -118,6 +147,16 @@ nav a:visited {
     font-size: 2rem;
     font-weight: 500;
     align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+    @include mobile {
+        text-align: left;
+        font-size: 1.2rem;
+        margin: 5% 5%;
+        padding-right: 20%;
+        padding-left: 10%;
+    }
 }
 
 .intro-container-summary {
@@ -127,6 +166,16 @@ nav a:visited {
     font-weight: 600;
     text-align: left;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+    @include mobile {
+        font-size: 2.5rem;
+        padding-right: 20%;
+        padding-left: 10%;
+        margin: 0 5%;
+    }
 }
 
 .intro-container-image {
@@ -135,61 +184,180 @@ nav a:visited {
     justify-content: center;
     align-items: center;
     padding: 0 2rem;
+    flex-wrap: wrap;
+    // overflow: hidden;
+
+    @include mobile {
+        display: none;
+    }
+
+    @include tablet {
+    }
 }
 
 // ---------- ABOUT SECTION ----------
 
 .about-section {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     margin: 10rem 18rem;
-    align-content: center;
     text-align: center;
+    gap: 2rem;
+
+    @include mobile {
+        flex-direction: column;
+        margin: 2rem 1rem;
+        text-align: center;
+    }
+
+    @include tablet {
+        flex-direction: row;
+        margin: 0 5%;
+        text-align: center;
+        justify-content: center;
+    
+    }
+}
+
+#aboutColumnOne { 
+    width: 40%;
+    display:flex;
+    justify-content: center;
+
+    @include mobile {
+        width: 80%
+    
+    }
+
+    @include tablet {
+    }
+    
+}
+
+#aboutColumnTwo { 
+    width: 60%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include mobile {
+        width: 100%
+    
+    }
+
+    @include tablet {
+    }
 }
 
 .about-title {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+
+    @include mobile {
+        margin-bottom: 0;
+    }
+
+    @include tablet {
+        margin-bottom: 0;
+    }
 }
 
 .about-para {
     display: flex;
+    flex-direction: column;
     text-align: left;
     align-items: center;
-}
+    flex-wrap: wrap;
+    max-width: 600px;
+    // margin: 0 auto;
 
-#columnOne {
-    margin: 0 5rem;
-    margin-bottom: 5rem;
-    padding-left: 4rem;
-    align-content: center;
-    // text-align: center;
+    @include mobile {
+        text-align: center;
+        
+    }
+
 }
 
 .about-image-container {
     display: flex;
     justify-content: center;
-    // align-items: center;
+    align-items: center;
+
+    
+    @include tablet {
+
+        max-width: 60%;
+        
+    }
+
 }
+
 .about-image-container img {
-    width: 100%;
+    width: 80%;
     border-radius: 15px;
+
+    @include mobile {
+        width: 100%;
+        margin-top: 10%;
+    }
+
+    @include tablet {
+
+        width: 100%;
+        
+    }
+
+
 }
 
 // ---------- SKILLS SECTION ----------
 
-.skills-section p {
+.skills-section {
+    @include tablet {
+        margin: 0 5%;
+    }
+}
+
+.skills-text {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     text-align: center;
-    padding: 0 35rem;
+    padding: 0 25%;
+
+    @include mobile {
+        padding: 0;
+    }
+
+    @include tablet {
+        padding: 0;
+    }
 }
 
 .skill-icon-section {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     gap: 1.5rem;
     margin-top: 2.5rem;
+
+    @include mobile {
+        gap: 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include tablet {
+        gap: 0;
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+    }
 }
 
 .skill-icon-container {
@@ -198,11 +366,28 @@ nav a:visited {
     align-items: center;
     text-align: center;
     margin-bottom: 6rem;
+    flex-wrap: wrap;
+
+    @include mobile {
+        margin-bottom: 2rem;
+    }
+
+    @include tablet {
+        margin-bottom: 2rem;
+    }
 }
 
 .skill-icon {
     height: 4rem;
     margin: 1rem;
+
+    @include mobile {
+        height: 3rem;
+    }
+
+    @include tablet {
+        height: 3rem;
+    }
 }
 
 // ---------- PROJECTS SECTION ----------
@@ -211,6 +396,10 @@ nav a:visited {
     display: flex;
     flex-direction: column;
     padding: 1.5rem;
+    flex-wrap: wrap;
+    @include mobile {
+        padding: 0;
+    }
 }
 
 .project-cards-container {
@@ -221,16 +410,25 @@ nav a:visited {
     row-gap: 0.5rem;
     padding: 20px;
     margin: 0 auto;
+
+    @include mobile {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "intro-container-name"
+            "intro-container-image"
+            "intro-container-summary";
+        margin: 0 auto;
+        grid-gap: 1.5rem;
+        padding: 0;
+    }
 }
 
 .project-card {
     position: relative;
     display: flex;
     flex-direction: column;
-    // align-items: center;
-    // text-align: center;
     margin: 20px;
-    max-width: 100%;
+    flex-wrap: wrap;
 }
 
 .project-card-block {
@@ -240,22 +438,45 @@ nav a:visited {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+
+    @include mobile {
+        width: 100%;
+        height: 30%;
+        padding: 8rem 0;
+    }
+
+    @include tablet {
+        width: 40%;
+ 
+    }
 }
 
-.project-card span {
-    font-family: $font-family-primary;
-    font-size: 38px;
-    font-weight: 600px;
-}
-
-.project.btns {
+.project-card-details {
     display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.project-btns {
+    display: flex;
+    justify-content: space-between;
+
+    @include mobile {
+        justify-content: center;
+        gap: 1rem;
+    }
 }
 
 .code-btn,
 .preview-btn {
     @include button-style($orange);
     display: inline-flex;
+    margin: 0;
+
+    @include mobile {
+        width: auto;
+    }
 }
 
 .code-icon {
@@ -285,9 +506,10 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 
     @include mobile {
-        flex-direction: column; // Stack items vertically on mobile
+        flex-direction: column;
         align-items: center;
     }
 }
@@ -295,9 +517,10 @@ footer {
 .footer-icons {
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
 
     @include mobile {
-        justify-content: center; // Center icons on mobile
+        justify-content: center;
         margin-top: 1rem;
     }
 }

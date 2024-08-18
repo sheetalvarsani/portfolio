@@ -9,14 +9,32 @@ h2 {
   font-weight: 600;
   text-align: center;
 }
+@media only screen and (max-width: 768px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+}
 
 main {
-  font-family: "Inter", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 1rem;
+  color: black;
+}
+@media only screen and (max-width: 768px) {
+  main {
+    margin: 2rem;
+  }
 }
 
 body {
   width: 100%;
+  margin: 0px;
 }
 
 nav {
@@ -32,7 +50,7 @@ nav ul {
 }
 
 nav li {
-  font-family: "Inter", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 1rem;
   list-style-type: none;
   display: flex;
@@ -45,6 +63,8 @@ nav li:hover {
 
 nav a {
   text-decoration: none;
+  color: inherit;
+  font-weight: 600;
 }
 
 nav a:visited {
@@ -55,16 +75,16 @@ nav a:visited {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 1rem 8rem;
+  margin: 1rem 2rem;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .header {
-    visibility: hidden;
+    display: none;
   }
 }
 
 .contact-btn {
-  font-family: "Inter", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 19.36px;
@@ -82,26 +102,38 @@ nav a:visited {
 .intro-grid-container {
   display: grid;
   grid-gap: 2rem;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: minmax(0, 60%) minmax(0, 40%);
   grid-template-areas: "intro-container-name intro-container-image" "intro-container-summary intro-container-image";
   margin: 10rem 20rem;
   align-content: center;
   text-align: center;
+  overflow: hidden;
 }
-@media only screen and (min-width: 481px) and (max-width: 768px) {
-  .intro-grid-container {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "intro-container-name intro-container-image" "intro-container-summary intro-container-image";
-    margin: 5rem 2rem;
-    grid-gap: 2rem;
-  }
-}
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .intro-grid-container {
     grid-template-columns: 1fr;
-    grid-template-areas: "intro-container-name" "intro-container-image" "intro-container-summary";
-    margin: 2rem 1rem;
-    grid-gap: 1.5rem;
+    grid-template-areas: "intro-container-name" "intro-container-summary";
+    margin: 0;
+    grid-gap: 1rem;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .intro-grid-container {
+    grid-template-columns: minmax(0, 60%) minmax(0, 40%);
+    grid-template-areas: "intro-container-name intro-container-image" "intro-container-summary intro-container-image";
+    margin: 0 5%;
+    grid-gap: 1rem;
+  }
+}
+
+.intro-grid-container img {
+  max-width: 100%;
+  height: auto;
+}
+@media only screen and (max-width: 768px) {
+  .intro-grid-container img {
+    display: none;
   }
 }
 
@@ -111,6 +143,17 @@ nav a:visited {
   font-size: 2rem;
   font-weight: 500;
   align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+@media only screen and (max-width: 768px) {
+  .intro-container-name {
+    text-align: left;
+    font-size: 1.2rem;
+    margin: 5% 5%;
+    padding-right: 20%;
+    padding-left: 10%;
+  }
 }
 
 .intro-container-summary {
@@ -120,6 +163,17 @@ nav a:visited {
   font-weight: 600;
   text-align: left;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+@media only screen and (max-width: 768px) {
+  .intro-container-summary {
+    font-size: 2.5rem;
+    padding-right: 20%;
+    padding-left: 10%;
+    margin: 0 5%;
+  }
 }
 
 .intro-container-image {
@@ -128,56 +182,163 @@ nav a:visited {
   justify-content: center;
   align-items: center;
   padding: 0 2rem;
+  flex-wrap: wrap;
 }
-
+@media only screen and (max-width: 768px) {
+  .intro-container-image {
+    display: none;
+  }
+}
 .about-section {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   margin: 10rem 18rem;
-  align-content: center;
   text-align: center;
+  gap: 2rem;
+}
+@media only screen and (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    margin: 2rem 1rem;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .about-section {
+    flex-direction: row;
+    margin: 0 5%;
+    text-align: center;
+    justify-content: center;
+  }
 }
 
+#aboutColumnOne {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+}
+@media only screen and (max-width: 768px) {
+  #aboutColumnOne {
+    width: 80%;
+  }
+}
+#aboutColumnTwo {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media only screen and (max-width: 768px) {
+  #aboutColumnTwo {
+    width: 100%;
+  }
+}
 .about-title {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+@media only screen and (max-width: 768px) {
+  .about-title {
+    margin-bottom: 0;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .about-title {
+    margin-bottom: 0;
+  }
 }
 
 .about-para {
   display: flex;
+  flex-direction: column;
   text-align: left;
   align-items: center;
+  flex-wrap: wrap;
+  max-width: 600px;
 }
-
-#columnOne {
-  margin: 0 5rem;
-  margin-bottom: 5rem;
-  padding-left: 4rem;
-  align-content: center;
+@media only screen and (max-width: 768px) {
+  .about-para {
+    text-align: center;
+  }
 }
 
 .about-image-container {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .about-image-container {
+    max-width: 60%;
+  }
 }
 
 .about-image-container img {
-  width: 100%;
+  width: 80%;
   border-radius: 15px;
 }
+@media only screen and (max-width: 768px) {
+  .about-image-container img {
+    width: 100%;
+    margin-top: 10%;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .about-image-container img {
+    width: 100%;
+  }
+}
 
-.skills-section p {
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .skills-section {
+    margin: 0 5%;
+  }
+}
+
+.skills-text {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   text-align: center;
-  padding: 0 35rem;
+  padding: 0 25%;
+}
+@media only screen and (max-width: 768px) {
+  .skills-text {
+    padding: 0;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .skills-text {
+    padding: 0;
+  }
 }
 
 .skill-icon-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: 1.5rem;
   margin-top: 2.5rem;
+}
+@media only screen and (max-width: 768px) {
+  .skill-icon-section {
+    gap: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .skill-icon-section {
+    gap: 0;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+  }
 }
 
 .skill-icon-container {
@@ -186,17 +347,44 @@ nav a:visited {
   align-items: center;
   text-align: center;
   margin-bottom: 6rem;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 768px) {
+  .skill-icon-container {
+    margin-bottom: 2rem;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .skill-icon-container {
+    margin-bottom: 2rem;
+  }
 }
 
 .skill-icon {
   height: 4rem;
   margin: 1rem;
 }
+@media only screen and (max-width: 768px) {
+  .skill-icon {
+    height: 3rem;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .skill-icon {
+    height: 3rem;
+  }
+}
 
 .projects-section {
   display: flex;
   flex-direction: column;
   padding: 1.5rem;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 768px) {
+  .projects-section {
+    padding: 0;
+  }
 }
 
 .project-cards-container {
@@ -208,13 +396,22 @@ nav a:visited {
   padding: 20px;
   margin: 0 auto;
 }
+@media only screen and (max-width: 768px) {
+  .project-cards-container {
+    grid-template-columns: 1fr;
+    grid-template-areas: "intro-container-name" "intro-container-image" "intro-container-summary";
+    margin: 0 auto;
+    grid-gap: 1.5rem;
+    padding: 0;
+  }
+}
 
 .project-card {
   position: relative;
   display: flex;
   flex-direction: column;
   margin: 20px;
-  max-width: 100%;
+  flex-wrap: wrap;
 }
 
 .project-card-block {
@@ -224,21 +421,41 @@ nav a:visited {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 768px) {
+  .project-card-block {
+    width: 100%;
+    height: 30%;
+    padding: 8rem 0;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .project-card-block {
+    width: 40%;
+  }
 }
 
-.project-card span {
-  font-family: "Inter", sans-serif;
-  font-size: 38px;
-  font-weight: 600px;
-}
-
-.project.btns {
+.project-card-details {
   display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.project-btns {
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 768px) {
+  .project-btns {
+    justify-content: center;
+    gap: 1rem;
+  }
 }
 
 .code-btn,
 .preview-btn {
-  font-family: "Inter", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 19.36px;
@@ -249,10 +466,17 @@ nav a:visited {
   cursor: pointer;
   transition: color 0.3s ease;
   display: inline-flex;
+  margin: 0;
 }
 .code-btn:hover,
 .preview-btn:hover {
   color: #D5896F;
+}
+@media only screen and (max-width: 768px) {
+  .code-btn,
+  .preview-btn {
+    width: auto;
+  }
 }
 
 .code-icon {
@@ -264,13 +488,13 @@ nav a:visited {
 
 footer {
   background-color: black;
-  font-family: "Inter", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-weight: 400;
   color: white;
   padding: 30px 180px;
   margin-top: 120px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   footer {
     padding: 1.5rem 2rem;
     text-align: center;
@@ -281,8 +505,9 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .footer {
     flex-direction: column;
     align-items: center;
@@ -292,8 +517,9 @@ footer {
 .footer-icons {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .footer-icons {
     justify-content: center;
     margin-top: 1rem;
