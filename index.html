@@ -17,10 +17,16 @@
             <h1>Sheetal Varsani</h1>
             <nav>
                 <ul>
-                    <li>Home</a></li>
+                    <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#projects">Projects</a></li>
-                    <li><a href="#footer"><button class="contact-btn">Get In Touch</button></a></li>
+                    <li>
+                        <a href="#footer"
+                            ><button class="contact-btn">
+                                Get In Touch
+                            </button></a
+                        >
+                    </li>
                 </ul>
             </nav>
         </header>
@@ -45,7 +51,15 @@
 
             <section class="about-section" id="about">
                 <!-- About Me with Photo -->
-                <section id="columnOne">
+                <section id="aboutColumnOne">
+                    <div class="about-image-container">
+                        <img
+                            src="./images/about-me.jpg"
+                            alt="photograph of Sheetal Varsani"
+                        />
+                    </div>
+                </section>
+                <section id="aboutColumnTwo">
                     <div class="about-title"><h2>About Me</h2></div>
                     <div class="about-para">
                         <p>
@@ -64,24 +78,18 @@
                         </p>
                     </div>
                 </section>
-                <section id="columnTwo">
-                    <div class="about-image-container">
-                        <img
-                            src="./images/about-me.jpg"
-                            alt="photograph of Sheetal Varsani"
-                        />
-                    </div>
-                </section>
             </section>
 
             <section class="skills-section">
                 <!-- Technical Skills -->
-                <h2>Technical Skills</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Architecto vero aut repellendus, ad quibusdam dolorem
-                    excepturi consequatur libero temporibus nulla nihil
-                </p>
+                <div class="skills-text">
+                    <h2>Technical Skills</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Architecto vero aut repellendus, ad quibusdam dolorem
+                        excepturi consequatur libero temporibus nulla nihil
+                    </p>
+                </div>
                 <div class="skill-icon-section">
                     <div class="skill-icon-container">
                         <img
@@ -167,138 +175,138 @@
                     <!-- Project Cards Container -->
                     <div class="project-card">
                         <!-- Project Card 1 -->
-                        <div class="card"></div>
+
                         <!-- Project Image -->
-                        <img
-                            class="project-screenshot"
-                            src="./images/screenshot-portfolio-project.jpg"
-                            alt="Screenshot of Portfolio Project"
-                        />
                         <!-- Project Description -->
-                        <p>REACT</p>
-                        <h3>Client Project</h3>
-                        <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit.
-                        </p>
-                        <!-- Buttons x2 -->
-                        <div class="project-btns">
-                            <button class="code-btn">
-                                Code<img
-                                    class="code-icon"
-                                    src="./images/code.png"
-                                    alt="Code Icon"
-                                />
-                            </button>
-                            <button class="preview-btn">
-                                Preview<img
-                                    class="code-icon"
-                                    src="./images/code.png"
-                                    alt="Code Icon"
-                                />
-                            </button>
+                        <div class="project-card-details">
+                            <div class="project-card-block"></div>
+                            <p>REACT</p>
+                            <h3>Client Project</h3>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur
+                                adipisicing elit.
+                            </p>
+                            <!-- Buttons x2 -->
+                            <div class="project-card-btns">
+                                <button class="code-btn">
+                                    Code
+                                    <img
+                                        class="code-icon"
+                                        src="./images/code.png"
+                                        alt="Code Icon"
+                                    />
+                                </button>
+                                <button class="preview-btn">
+                                    Preview
+                                    <img
+                                        class="code-icon"
+                                        src="./images/code.png"
+                                        alt="Code Icon"
+                                    />
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <div class="project-card">
                         <!-- Project Card 2 -->
-                        <div class="card"></div>
+
                         <!-- Project Image -->
-                        <img
-                            class="project-screenshot"
-                            src="./images/screenshot-portfolio-project.jpg"
-                            alt="Screenshot of Portfolio Project"
-                        />
                         <!-- Project Description -->
-                        <p>REACT</p>
-                        <h3>Client Project</h3>
-                        <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit.
-                        </p>
-                        <!-- Buttons x2 -->
-                        <div class="project-btns">
-                            <button class="code-btn">
-                                Code<img
-                                    class="code-icon"
-                                    src="./images/code.png"
-                                    alt="Code Icon"
-                                />
-                            </button>
-                            <button class="preview-btn">
-                                Preview<img
-                                    class="code-icon"
-                                    src="./images/code.png"
-                                    alt="Code Icon"
-                                />
-                            </button>
+                        <div class="project-card-details">
+                            <div class="project-card-block"></div>
+                            <p>REACT</p>
+                            <h3>Client Project</h3>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur
+                                adipisicing elit.
+                            </p>
+                            <!-- Buttons x2 -->
+                            <div class="project-card-btns">
+                                <button class="code-btn">
+                                    Code
+                                    <img
+                                        class="code-icon"
+                                        src="./images/code.png"
+                                        alt="Code Icon"
+                                    />
+                                </button>
+                                <button class="preview-btn">
+                                    Preview
+                                    <img
+                                        class="code-icon"
+                                        src="./images/code.png"
+                                        alt="Code Icon"
+                                    />
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <div class="project-card">
                         <!-- Project Card 3 -->
-                        <div class="card"></div>
+
                         <!-- Project Image -->
-                        <img
-                            class="project-screenshot"
-                            src="./images/screenshot-portfolio-project.jpg"
-                            alt="Screenshot of Portfolio Project"
-                        />
                         <!-- Project Description -->
-                        <p>REACT</p>
-                        <h3>Client Project</h3>
-                        <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit.
-                        </p>
-                        <!-- Buttons x2 -->
-                        <div class="project-btns">
-                            <button class="code-btn">
-                                Code<img
-                                    class="code-icon"
-                                    src="./images/code.png"
-                                    alt="Code Icon"
-                                />
-                            </button>
-                            <button class="preview-btn">
-                                Preview<img
-                                    class="code-icon"
-                                    src="./images/code.png"
-                                    alt="Code Icon"
-                                />
-                            </button>
+                        <div class="project-card-details">
+                            <div class="project-card-block"></div>
+                            <p>REACT</p>
+                            <h3>Client Project</h3>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur
+                                adipisicing elit.
+                            </p>
+                            <!-- Buttons x2 -->
+                            <div class="project-card-btns">
+                                <button class="code-btn">
+                                    Code
+                                    <img
+                                        class="code-icon"
+                                        src="./images/code.png"
+                                        alt="Code Icon"
+                                    />
+                                </button>
+                                <button class="preview-btn">
+                                    Preview
+                                    <img
+                                        class="code-icon"
+                                        src="./images/code.png"
+                                        alt="Code Icon"
+                                    />
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <div class="project-card">
                         <!-- Project Card 4 -->
-                        <div class="card"></div>
+
                         <!-- Project Image -->
-                        <img
-                            class="project-screenshot"
-                            src="./images/screenshot-portfolio-project.jpg"
-                            alt="Screenshot of Portfolio Project"
-                        />
                         <!-- Project Description -->
-                        <p>REACT</p>
-                        <h3>Client Project</h3>
-                        <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit.
-                        </p>
-                        <!-- Buttons x2 -->
-                        <div class="project-btns">
-                            <button class="code-btn">
-                                Code<img
-                                    class="code-icon"
-                                    src="./images/code.png"
-                                    alt="Code Icon"
-                                />
-                            </button>
-                            <button class="preview-btn">
-                                Preview<img
-                                    class="code-icon"
-                                    src="./images/code.png"
-                                    alt="Code Icon"
-                                />
-                            </button>
+                        <div class="project-card-details">
+                            <div class="project-card-block"></div>
+                            <p>REACT</p>
+                            <h3>Client Project</h3>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur
+                                adipisicing elit.
+                            </p>
+                            <!-- Buttons x2 -->
+                            <div class="project-card-btns">
+                                <button class="code-btn">
+                                    Code
+                                    <img
+                                        class="code-icon"
+                                        src="./images/code.png"
+                                        alt="Code Icon"
+                                    />
+                                </button>
+                                <button class="preview-btn">
+                                    Preview
+                                    <img
+                                        class="code-icon"
+                                        src="./images/code.png"
+                                        alt="Code Icon"
+                                    />
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -308,7 +316,7 @@
         <footer id="footer">
             <div class="footer">
                 <!-- Email on Left -->
-                <p>sheetalkvarsani@gmail.com</p>
+                <p>sheetalvarsani@hotmail.co.uk</p>
                 <!-- Icons on Right -->
                 <div class="footer-icons">
                     <a href="" target="_blank" title="Download CV">
