@@ -1,6 +1,21 @@
-h1 {
+body {
+  width: 100%;
+  margin: 0;
   font-family: "DM Sans", sans-serif;
-  font-size: 1.2rem;
+}
+
+main {
+  font-size: 1.5rem;
+  color: black;
+}
+@media only screen and (max-width: 768px) {
+  main {
+    margin: 2rem;
+  }
+}
+
+h1 {
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
@@ -21,56 +36,6 @@ h3 {
   font-size: 1.5rem;
 }
 
-main {
-  font-family: "DM Sans", sans-serif;
-  font-size: 1rem;
-  color: black;
-}
-@media only screen and (max-width: 768px) {
-  main {
-    margin: 2rem;
-  }
-}
-
-body {
-  width: 100%;
-  margin: 0px;
-}
-
-nav {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-nav ul {
-  display: flex;
-  gap: 5rem;
-}
-
-nav li {
-  font-family: "DM Sans", sans-serif;
-  font-size: 1rem;
-  list-style-type: none;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-nav li:hover {
-  color: #D5896F;
-}
-
-nav a {
-  text-decoration: none;
-  color: inherit;
-  font-weight: 600;
-}
-
-nav a:visited {
-  color: inherit;
-}
-
 .header {
   display: flex;
   align-items: center;
@@ -83,7 +48,33 @@ nav a:visited {
   }
 }
 
-.contact-btn {
+.header__nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.header__nav-list {
+  display: flex;
+  gap: 5rem;
+}
+.header__nav-item {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.3rem;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.header__nav-item:hover {
+  color: #D5896F;
+}
+.header__nav-link {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+}
+
+.header__contact-btn {
   font-family: "DM Sans", sans-serif;
   font-size: 16px;
   font-weight: 700;
@@ -94,12 +85,13 @@ nav a:visited {
   background-color: white;
   cursor: pointer;
   transition: color 0.3s ease;
+  font-size: 1.2rem;
 }
-.contact-btn:hover {
+.header__contact-btn:hover {
   color: #D5896F;
 }
 
-.intro-grid-container {
+.intro {
   display: grid;
   grid-gap: 2rem;
   grid-template-columns: minmax(0, 60%) minmax(0, 40%);
@@ -110,7 +102,7 @@ nav a:visited {
   overflow: hidden;
 }
 @media only screen and (max-width: 768px) {
-  .intro-grid-container {
+  .intro {
     grid-template-columns: 1fr;
     grid-template-areas: "intro-container-name" "intro-container-summary";
     margin: 0;
@@ -119,7 +111,7 @@ nav a:visited {
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
-  .intro-grid-container {
+  .intro {
     grid-template-columns: minmax(0, 60%) minmax(0, 40%);
     grid-template-areas: "intro-container-name intro-container-image" "intro-container-summary intro-container-image";
     margin: 0 5%;
@@ -127,17 +119,17 @@ nav a:visited {
   }
 }
 
-.intro-grid-container img {
+.intro img {
   max-width: 100%;
   height: auto;
 }
 @media only screen and (max-width: 768px) {
-  .intro-grid-container img {
+  .intro img {
     display: none;
   }
 }
 
-.intro-container-name {
+.intro__name {
   display: flex;
   grid-area: intro-container-name;
   font-size: 2rem;
@@ -147,7 +139,7 @@ nav a:visited {
   overflow: hidden;
 }
 @media only screen and (max-width: 768px) {
-  .intro-container-name {
+  .intro__name {
     text-align: left;
     font-size: 1.2rem;
     margin: 5% 5%;
@@ -156,7 +148,7 @@ nav a:visited {
   }
 }
 
-.intro-container-summary {
+.intro__summary {
   display: flex;
   grid-area: intro-container-summary;
   font-size: 4rem;
@@ -168,7 +160,7 @@ nav a:visited {
   overflow: hidden;
 }
 @media only screen and (max-width: 768px) {
-  .intro-container-summary {
+  .intro__summary {
     font-size: 2.5rem;
     padding-right: 20%;
     padding-left: 10%;
@@ -176,7 +168,7 @@ nav a:visited {
   }
 }
 
-.intro-container-image {
+.intro__image {
   display: flex;
   grid-area: intro-container-image;
   justify-content: center;
@@ -185,11 +177,11 @@ nav a:visited {
   flex-wrap: wrap;
 }
 @media only screen and (max-width: 768px) {
-  .intro-container-image {
+  .intro__image {
     display: none;
   }
 }
-.about-section {
+.about {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -199,14 +191,14 @@ nav a:visited {
   gap: 2rem;
 }
 @media only screen and (max-width: 768px) {
-  .about-section {
+  .about {
     flex-direction: column;
     margin: 2rem 1rem;
     text-align: center;
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
-  .about-section {
+  .about {
     flex-direction: row;
     margin: 0 5%;
     text-align: center;
@@ -214,24 +206,14 @@ nav a:visited {
   }
 }
 
-#aboutColumnOne {
-  width: 40%;
-  display: flex;
-  justify-content: center;
-}
-@media only screen and (max-width: 768px) {
-  #aboutColumnOne {
-    width: 80%;
-  }
-}
-#aboutColumnTwo {
+.about-text-container {
   width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 @media only screen and (max-width: 768px) {
-  #aboutColumnTwo {
+  .about-text-container {
     width: 100%;
   }
 }
@@ -259,9 +241,13 @@ nav a:visited {
   text-align: left;
   align-items: center;
   flex-wrap: wrap;
-  max-width: 600px;
 }
 @media only screen and (max-width: 768px) {
+  .about-para {
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
   .about-para {
     text-align: center;
   }
@@ -271,10 +257,16 @@ nav a:visited {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 70%;
+}
+@media only screen and (max-width: 768px) {
+  .about-image-container {
+    width: 75%;
+  }
 }
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   .about-image-container {
-    max-width: 60%;
+    max-width: 90%;
   }
 }
 
@@ -284,13 +276,13 @@ nav a:visited {
 }
 @media only screen and (max-width: 768px) {
   .about-image-container img {
-    width: 100%;
+    width: 75%;
     margin-top: 10%;
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   .about-image-container img {
-    width: 100%;
+    width: 90%;
   }
 }
 
@@ -318,7 +310,7 @@ nav a:visited {
   }
 }
 
-.skill-icon-section {
+.skill-icon-row {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -327,14 +319,14 @@ nav a:visited {
   margin-top: 2.5rem;
 }
 @media only screen and (max-width: 768px) {
-  .skill-icon-section {
+  .skill-icon-row {
     gap: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
-  .skill-icon-section {
+  .skill-icon-row {
     gap: 0;
     display: grid;
     grid-template-columns: repeat(9, 1fr);

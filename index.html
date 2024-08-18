@@ -13,34 +13,33 @@
         <title>Portfolio</title>
     </head>
     <body>
+        <!-- HEADER & NAV -->
         <header class="header">
-            <h1>Sheetal Varsani</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li>
-                        <a href="#footer"
-                            ><button class="contact-btn">
-                                Get In Touch
-                            </button></a
-                        >
+            <h1 class="header__title">Sheetal Varsani</h1>
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="#home" class="header__nav-link">Home</a></li>
+                    <li class="header__nav-item"><a href="#about" class="header__nav-link">About</a></li>
+                    <li class="header__nav-item"><a href="#projects" class="header__nav-link">Projects</a></li>
+                    <li class="header__nav-item">
+                        <a href="#footer" class="header__nav-link">
+                            <button class="header__contact-btn">Get In Touch</button>
+                        </a>
                     </li>
                 </ul>
             </nav>
         </header>
 
         <main id="home">
-            <section class="intro-grid-container">
-                <!-- Intro and Graphic -->
-                <div class="intro-container-name">
+            <!-- INTRO SECTION -->
+            <section class="intro">
+                <div class="intro__name">
                     👋🏽 Hey! I'm Sheetal Varsani
                 </div>
-                <div class="intro-container-summary">
+                <div class="intro__summary">
                     A Junior Software Developer based in the UK.
                 </div>
-                <div class="intro-container-image">
+                <div class="intro__image">
                     <img
                         src="./images/developer-graphic.png"
                         style="width: 400px"
@@ -49,17 +48,17 @@
                 </div>
             </section>
 
-            <section class="about-section" id="about">
-                <!-- About Me with Photo -->
-                <section id="aboutColumnOne">
+            <!-- ABOUT SECTION -->
+            <section class="about">
+                
                     <div class="about-image-container">
                         <img
                             src="./images/about-me.jpg"
                             alt="photograph of Sheetal Varsani"
                         />
                     </div>
-                </section>
-                <section id="aboutColumnTwo">
+               
+                <div class="about-text-container">
                     <div class="about-title"><h2>About Me</h2></div>
                     <div class="about-para">
                         <p>
@@ -77,11 +76,11 @@
                             aspernatur?
                         </p>
                     </div>
-                </section>
+                </div>
             </section>
 
+            <!-- SKILLS SECTION -->
             <section class="skills-section">
-                <!-- Technical Skills -->
                 <div class="skills-text">
                     <h2>Technical Skills</h2>
                     <p>
@@ -90,7 +89,7 @@
                         excepturi consequatur libero temporibus nulla nihil
                     </p>
                 </div>
-                <div class="skill-icon-section">
+                <div class="skill-icon-row">
                     <div class="skill-icon-container">
                         <img
                             class="skill-icon"
@@ -166,18 +165,13 @@
                 </div>
             </section>
 
-            <section class="projects-section" id="projects">
-                <!-- Projects -->
-                <!-- 'My Projects' Title -->
+            <!-- PROJECTS SECTION -->
+
+            <section class="projects-section">
                 <h2>My Projects</h2>
 
                 <div class="project-cards-container">
-                    <!-- Project Cards Container -->
                     <div class="project-card">
-                        <!-- Project Card 1 -->
-
-                        <!-- Project Image -->
-                        <!-- Project Description -->
                         <div class="project-card-details">
                             <div class="project-card-block"></div>
                             <p>REACT</p>
@@ -186,7 +180,6 @@
                                 Lorem ipsum, dolor sit amet consectetur
                                 adipisicing elit.
                             </p>
-                            <!-- Buttons x2 -->
                             <div class="project-card-btns">
                                 <button class="code-btn">
                                     Code
@@ -208,10 +201,6 @@
                         </div>
                     </div>
                     <div class="project-card">
-                        <!-- Project Card 2 -->
-
-                        <!-- Project Image -->
-                        <!-- Project Description -->
                         <div class="project-card-details">
                             <div class="project-card-block"></div>
                             <p>REACT</p>
@@ -220,7 +209,6 @@
                                 Lorem ipsum, dolor sit amet consectetur
                                 adipisicing elit.
                             </p>
-                            <!-- Buttons x2 -->
                             <div class="project-card-btns">
                                 <button class="code-btn">
                                     Code
@@ -242,10 +230,6 @@
                         </div>
                     </div>
                     <div class="project-card">
-                        <!-- Project Card 3 -->
-
-                        <!-- Project Image -->
-                        <!-- Project Description -->
                         <div class="project-card-details">
                             <div class="project-card-block"></div>
                             <p>REACT</p>
@@ -254,7 +238,6 @@
                                 Lorem ipsum, dolor sit amet consectetur
                                 adipisicing elit.
                             </p>
-                            <!-- Buttons x2 -->
                             <div class="project-card-btns">
                                 <button class="code-btn">
                                     Code
@@ -276,10 +259,6 @@
                         </div>
                     </div>
                     <div class="project-card">
-                        <!-- Project Card 4 -->
-
-                        <!-- Project Image -->
-                        <!-- Project Description -->
                         <div class="project-card-details">
                             <div class="project-card-block"></div>
                             <p>REACT</p>
@@ -288,7 +267,7 @@
                                 Lorem ipsum, dolor sit amet consectetur
                                 adipisicing elit.
                             </p>
-                            <!-- Buttons x2 -->
+              
                             <div class="project-card-btns">
                                 <button class="code-btn">
                                     Code
@@ -315,9 +294,7 @@
 
         <footer id="footer">
             <div class="footer">
-                <!-- Email on Left -->
                 <p>sheetalvarsani@hotmail.co.uk</p>
-                <!-- Icons on Right -->
                 <div class="footer-icons">
                     <a href="" target="_blank" title="Download CV">
                         <img
