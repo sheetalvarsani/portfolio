@@ -8,8 +8,6 @@ $font-color-primary: black;
 
 // GLOBAL STYLES -------------------
 
-
-
 body {
     width: 100%;
     margin: 0;
@@ -26,7 +24,6 @@ main {
 }
 
 h1 {
-
     font-size: 1.5rem;
     font-weight: 700;
 }
@@ -217,7 +214,7 @@ h3 {
     }
 }
 
-.about-text-container {
+.about__text-container {
     width: 60%;
     display: flex;
     flex-direction: column;
@@ -226,13 +223,9 @@ h3 {
     @include mobile {
         width: 100%;
     }
-
-    @include tablet {
- 
-    }
 }
 
-.about-title {
+.about__title {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -242,20 +235,14 @@ h3 {
     @include mobile {
         margin-bottom: 0;
     }
-
-    @include tablet {
-        margin-bottom: 0;
-    }
 }
 
-.about-para {
+.about__paragraph {
     display: flex;
     flex-direction: column;
     text-align: left;
     align-items: center;
     flex-wrap: wrap;
-    // max-width: 600px;
-    // margin: 0 auto;
 
     @include mobile {
         text-align: center;
@@ -266,13 +253,11 @@ h3 {
     }
 }
 
-.about-image-container {
+.about__image-container {
     display: flex;
     justify-content: center;
     align-items: center;
-
     width: 70%;
-
 
     @include mobile {
         width: 75%;
@@ -283,7 +268,7 @@ h3 {
     }
 }
 
-.about-image-container img {
+.about__image {
     width: 80%;
     border-radius: 15px;
 
@@ -299,82 +284,81 @@ h3 {
 
 // ---------- SKILLS SECTION ----------
 
-.skills-section {
+.skills {
     @include tablet {
         margin: 0 5%;
     }
+
+    &__text {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        text-align: center;
+        padding: 0 25%;
+
+        @include mobile {
+            padding: 0;
+        }
+
+        @include tablet {
+            padding: 0;
+        }
+    }
+
+    &__icon-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        margin-top: 2.5rem;
+
+        @include mobile {
+            gap: 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include tablet {
+            gap: 0;
+            display: grid;
+            grid-template-columns: repeat(9, 1fr);
+        }
+    }
+
+    &__icon-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 6rem;
+        flex-wrap: wrap;
+
+        @include mobile {
+            margin-bottom: 2rem;
+        }
+
+        @include tablet {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__icon {
+        height: 4rem;
+        margin: 1rem;
+
+        @include mobile {
+            height: 3rem;
+        }
+
+        @include tablet {
+            height: 3rem;
+        }
+    }
 }
-
-.skills-text {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    text-align: center;
-    padding: 0 25%;
-
-    @include mobile {
-        padding: 0;
-    }
-
-    @include tablet {
-        padding: 0;
-    }
-}
-
-.skill-icon-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    margin-top: 2.5rem;
-
-    @include mobile {
-        gap: 0;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    @include tablet {
-        gap: 0;
-        display: grid;
-        grid-template-columns: repeat(9, 1fr);
-    }
-}
-
-.skill-icon-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 6rem;
-    flex-wrap: wrap;
-
-    @include mobile {
-        margin-bottom: 2rem;
-    }
-
-    @include tablet {
-        margin-bottom: 2rem;
-    }
-}
-
-.skill-icon {
-    height: 4rem;
-    margin: 1rem;
-
-    @include mobile {
-        height: 3rem;
-    }
-
-    @include tablet {
-        height: 3rem;
-    }
-}
-
 // ---------- PROJECTS SECTION ----------
 
-.projects-section {
+.projects {
     display: flex;
     flex-direction: column;
     padding: 1.5rem;
@@ -382,41 +366,45 @@ h3 {
     @include mobile {
         padding: 0;
     }
-}
 
-.project-cards-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-content: center;
-    justify-content: center;
-    row-gap: 0.5rem;
-    padding: 20px;
-    margin: 0 auto;
-
-    @include mobile {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "intro-container-name"
-            "intro-container-image"
-            "intro-container-summary";
+    &__cards-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-content: center;
+        justify-content: center;
+        gap: 5rem;
+        padding: 20px;
         margin: 0 auto;
-        grid-gap: 1.5rem;
-        padding: 0;
+
+        @include mobile {
+            grid-template-columns: 1fr;
+            padding: 0;
+            margin: 0;
+            justify-items: center;
+            gap: 0;
+        }
     }
 }
 
-.project-card {
+.projects__card {
     position: relative;
     display: flex;
     flex-direction: column;
     margin: 20px;
     flex-wrap: wrap;
+    width: 60%;
+
+    @include mobile {
+        width: 100%;
+        margin: 1rem 0;
+        padding-top: 3rem;
+    }
 }
 
-.project-card-block {
+.projects__card-block {
     background-color: $tan;
-    width: 12rem;
-    padding: 100px;
+    width: 100%;
+    padding: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -424,7 +412,7 @@ h3 {
 
     @include mobile {
         width: 100%;
-        height: 30%;
+
         padding: 8rem 0;
     }
 
@@ -433,24 +421,26 @@ h3 {
     }
 }
 
-.project-card-details {
+.projects__card-details {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-}
-
-.project-btns {
-    display: flex;
-    justify-content: space-between;
+    width: 90%;
+    justify-content: center;
 
     @include mobile {
-        justify-content: center;
-        gap: 1rem;
+        width: 100%;
     }
 }
 
-.code-btn,
-.preview-btn {
+.projects__card-btns {
+    display: flex;
+    justify-content: left;
+    gap: 1rem;
+}
+
+.projects__code-btn,
+.projects__preview-btn {
     @include button-style($orange);
     display: inline-flex;
     margin: 0;
@@ -460,7 +450,7 @@ h3 {
     }
 }
 
-.code-icon {
+.projects__code-icon {
     width: 20px;
     display: inline-block;
     padding: 0 5px;
@@ -469,9 +459,9 @@ h3 {
 
 // ---------- FOOTER SECTION ----------
 
-footer {
+.footer {
     background-color: black;
-    font-family: $font-family-primary;
+   
     font-weight: 400;
     color: white;
     padding: 30px 180px;
@@ -481,32 +471,33 @@ footer {
         padding: 1.5rem 2rem; // Smaller padding for mobile
         text-align: center; // Center-align text on smaller screens
     }
-}
 
-.footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-
-    @include mobile {
-        flex-direction: column;
+    &__container {
+        display: flex;
+        justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
+
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+        }
     }
-}
 
-.footer-icons {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
+    &__icon-row {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
 
-    @include mobile {
-        justify-content: center;
-        margin-top: 1rem;
+        @include mobile {
+            justify-content: center;
+            margin-top: 1rem;
+        }
     }
-}
 
-.footer-icon {
-    width: 30px;
-    height: 30px;
+    &__icon {
+        width: 30px;
+        height: 30px;
+        margin: 0 5px;
+    }
 }
