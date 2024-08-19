@@ -13,34 +13,33 @@
         <title>Portfolio</title>
     </head>
     <body>
+        <!-- HEADER & NAV -->
         <header class="header">
-            <h1>Sheetal Varsani</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li>
-                        <a href="#footer"
-                            ><button class="contact-btn">
-                                Get In Touch
-                            </button></a
-                        >
+            <h1 class="header__title">Sheetal Varsani</h1>
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="#home" class="header__nav-link">Home</a></li>
+                    <li class="header__nav-item"><a href="#about" class="header__nav-link">About</a></li>
+                    <li class="header__nav-item"><a href="#projects" class="header__nav-link">Projects</a></li>
+                    <li class="header__nav-item">
+                        <a href="#footer" class="header__nav-link">
+                            <button class="header__contact-btn">Get In Touch</button>
+                        </a>
                     </li>
                 </ul>
             </nav>
         </header>
 
         <main id="home">
-            <section class="intro-grid-container">
-                <!-- Intro and Graphic -->
-                <div class="intro-container-name">
+            <!-- INTRO SECTION -->
+            <section class="intro">
+                <div class="intro__name">
                     👋🏽 Hey! I'm Sheetal Varsani
                 </div>
-                <div class="intro-container-summary">
+                <div class="intro__summary">
                     A Junior Software Developer based in the UK.
                 </div>
-                <div class="intro-container-image">
+                <div class="intro__image">
                     <img
                         src="./images/developer-graphic.png"
                         style="width: 400px"
@@ -49,40 +48,40 @@
                 </div>
             </section>
 
-            <section class="about-section" id="about">
-                <!-- About Me with Photo -->
-                <section id="aboutColumnOne">
-                    <div class="about-image-container">
-                        <img
-                            src="./images/about-me.jpg"
-                            alt="photograph of Sheetal Varsani"
-                        />
+            <!-- ABOUT SECTION -->
+            <section class="about">
+                <div class="about__image-container">
+                    <img
+                        class="about__image"
+                        src="./images/about-me.jpg"
+                        alt="photograph of Sheetal Varsani"
+                    />
+                </div>
+            
+                <div class="about__text-container">
+                    <div class="about__title">
+                        <h2>About Me</h2>
                     </div>
-                </section>
-                <section id="aboutColumnTwo">
-                    <div class="about-title"><h2>About Me</h2></div>
-                    <div class="about-para">
+                    <div class="about__paragraph">
                         <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing
-                            elit. Officia dignissimos ipsa veniam maiores
-                            praesentium eum voluptates perferendis tempora
-                            repudiandae aliquid alias odit fugiat excepturi a
-                            repellat rerum, distinctio error tempore Lorem ipsum
-                            dolor sit, amet consectetur adipisicing elit.
-                            <br />
-                            <br />
-                            Accusamus minima, consequatur in quam aspernatur qui
-                            officiis, illum nemo omnis optio minus? Deleniti
-                            itaque porro veniam alias nisi quod quaerat
-                            aspernatur?
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Officia dignissimos ipsa veniam maiores praesentium eum 
+                            voluptates perferendis tempora repudiandae aliquid alias 
+                            odit fugiat excepturi a repellat rerum, distinctio error 
+                            tempore Lorem ipsum dolor sit, amet consectetur adipisicing 
+                            elit.
+                            <br /><br />
+                            Accusamus minima, consequatur in quam aspernatur qui officiis, 
+                            illum nemo omnis optio minus? Deleniti itaque porro veniam alias 
+                            nisi quod quaerat aspernatur?
                         </p>
                     </div>
-                </section>
+                </div>
             </section>
 
-            <section class="skills-section">
-                <!-- Technical Skills -->
-                <div class="skills-text">
+            <!-- SKILLS SECTION -->
+            <section class="skills">
+                <div class="skills__text">
                     <h2>Technical Skills</h2>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -90,74 +89,74 @@
                         excepturi consequatur libero temporibus nulla nihil
                     </p>
                 </div>
-                <div class="skill-icon-section">
-                    <div class="skill-icon-container">
+                <div class="skills__icon-row">
+                    <div class="skills__icon-container">
                         <img
-                            class="skill-icon"
+                            class="skills__icon"
                             src="./images/git-icon.png"
                             alt="GIT logo"
                         />
                         <span>GIT</span>
                     </div>
-                    <div class="skill-icon-container">
+                    <div class="skills__icon-container">
                         <img
-                            class="skill-icon"
+                            class="skills__icon"
                             src="./images/html5-icon.png"
                             alt="HTML5 logo"
                         />
                         <span>HTML5</span>
                     </div>
-                    <div class="skill-icon-container">
+                    <div class="skills__icon-container">
                         <img
-                            class="skill-icon"
+                            class="skills__icon"
                             src="./images/css3-icon.png"
                             alt="CSS3 logo"
                         />
                         <span>CSS3</span>
                     </div>
-                    <div class="skill-icon-container">
+                    <div class="skills__icon-container">
                         <img
-                            class="skill-icon"
+                            class="skills__icon"
                             src="./images/js-icon.png"
                             alt="JavaScript logo"
                         />
                         <span>JAVASCRIPT</span>
                     </div>
-                    <div class="skill-icon-container">
+                    <div class="skills__icon-container">
                         <img
-                            class="skill-icon"
+                            class="skills__icon"
                             src="./images/scss-icon.png"
                             alt="SCSS logo"
                         />
                         <span>SCSS</span>
                     </div>
-                    <div class="skill-icon-container">
+                    <div class="skills__icon-container">
                         <img
-                            class="skill-icon"
+                            class="skills__icon"
                             src="./images/bem-icon.png"
                             alt="BEM logo"
                         />
                         <span>BEM</span>
                     </div>
-                    <div class="skill-icon-container">
+                    <div class="skills__icon-container">
                         <img
-                            class="skill-icon"
+                            class="skills__icon"
                             src="./images/react-icon.png"
                             alt="React logo"
                         />
                         <span>REACT</span>
                     </div>
-                    <div class="skill-icon-container">
+                    <div class="skills__icon-container">
                         <img
-                            class="skill-icon"
+                            class="skills__icon"
                             src="./images/java-icon.png"
                             alt="Java logo"
                         />
                         <span>JAVA</span>
                     </div>
-                    <div class="skill-icon-container">
+                    <div class="skills__icon-container">
                         <img
-                            class="skill-icon"
+                            class="skills__icon"
                             src="./images/springboot-icon.png"
                             alt="Spring boot logo"
                         />
@@ -166,142 +165,33 @@
                 </div>
             </section>
 
-            <section class="projects-section" id="projects">
-                <!-- Projects -->
-                <!-- 'My Projects' Title -->
+            <!-- PROJECTS SECTION -->
+
+            <section class="projects">
                 <h2>My Projects</h2>
-
-                <div class="project-cards-container">
-                    <!-- Project Cards Container -->
-                    <div class="project-card">
-                        <!-- Project Card 1 -->
-
-                        <!-- Project Image -->
-                        <!-- Project Description -->
-                        <div class="project-card-details">
-                            <div class="project-card-block"></div>
+            
+                <div class="projects__cards-container">
+                    <div class="projects__card">
+                        <div class="projects__card-details">
+                            <div class="projects__card-block"></div>
                             <p>REACT</p>
                             <h3>Client Project</h3>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur
-                                adipisicing elit.
+                            <p class="projects__card-description">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                             </p>
-                            <!-- Buttons x2 -->
-                            <div class="project-card-btns">
-                                <button class="code-btn">
+                            <div class="projects__card-btns">
+                                <button class="projects__code-btn">
                                     Code
                                     <img
-                                        class="code-icon"
+                                        class="projects__code-icon"
                                         src="./images/code.png"
                                         alt="Code Icon"
                                     />
                                 </button>
-                                <button class="preview-btn">
+                                <button class="projects__preview-btn">
                                     Preview
                                     <img
-                                        class="code-icon"
-                                        src="./images/code.png"
-                                        alt="Code Icon"
-                                    />
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <!-- Project Card 2 -->
-
-                        <!-- Project Image -->
-                        <!-- Project Description -->
-                        <div class="project-card-details">
-                            <div class="project-card-block"></div>
-                            <p>REACT</p>
-                            <h3>Client Project</h3>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur
-                                adipisicing elit.
-                            </p>
-                            <!-- Buttons x2 -->
-                            <div class="project-card-btns">
-                                <button class="code-btn">
-                                    Code
-                                    <img
-                                        class="code-icon"
-                                        src="./images/code.png"
-                                        alt="Code Icon"
-                                    />
-                                </button>
-                                <button class="preview-btn">
-                                    Preview
-                                    <img
-                                        class="code-icon"
-                                        src="./images/code.png"
-                                        alt="Code Icon"
-                                    />
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <!-- Project Card 3 -->
-
-                        <!-- Project Image -->
-                        <!-- Project Description -->
-                        <div class="project-card-details">
-                            <div class="project-card-block"></div>
-                            <p>REACT</p>
-                            <h3>Client Project</h3>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur
-                                adipisicing elit.
-                            </p>
-                            <!-- Buttons x2 -->
-                            <div class="project-card-btns">
-                                <button class="code-btn">
-                                    Code
-                                    <img
-                                        class="code-icon"
-                                        src="./images/code.png"
-                                        alt="Code Icon"
-                                    />
-                                </button>
-                                <button class="preview-btn">
-                                    Preview
-                                    <img
-                                        class="code-icon"
-                                        src="./images/code.png"
-                                        alt="Code Icon"
-                                    />
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <!-- Project Card 4 -->
-
-                        <!-- Project Image -->
-                        <!-- Project Description -->
-                        <div class="project-card-details">
-                            <div class="project-card-block"></div>
-                            <p>REACT</p>
-                            <h3>Client Project</h3>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur
-                                adipisicing elit.
-                            </p>
-                            <!-- Buttons x2 -->
-                            <div class="project-card-btns">
-                                <button class="code-btn">
-                                    Code
-                                    <img
-                                        class="code-icon"
-                                        src="./images/code.png"
-                                        alt="Code Icon"
-                                    />
-                                </button>
-                                <button class="preview-btn">
-                                    Preview
-                                    <img
-                                        class="code-icon"
+                                        class="projects__code-icon"
                                         src="./images/code.png"
                                         alt="Code Icon"
                                     />
@@ -311,17 +201,16 @@
                     </div>
                 </div>
             </section>
+            
         </main>
 
-        <footer id="footer">
-            <div class="footer">
-                <!-- Email on Left -->
+        <footer class="footer" >
+            <div class="footer__container">
                 <p>sheetalvarsani@hotmail.co.uk</p>
-                <!-- Icons on Right -->
-                <div class="footer-icons">
+                <div class="footer-icon-row">
                     <a href="" target="_blank" title="Download CV">
                         <img
-                            class="footer-icon"
+                            class="footer__icon"
                             src="./images/cv-icon.png"
                             alt="CV icon"
                         />
@@ -332,7 +221,7 @@
                         title="GitHub Profile"
                     >
                         <img
-                            class="footer-icon"
+                            class="footer__icon"
                             src="./images/github-icon.png"
                             alt="Github icon"
                         />
@@ -343,7 +232,7 @@
                         title="LinkedIn Profile"
                     >
                         <img
-                            class="footer-icon"
+                            class="footer__icon"
                             src="./images/linkedin-icon.png"
                             alt="Linkedin icon"
                         />
