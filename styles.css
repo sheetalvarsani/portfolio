@@ -57,13 +57,11 @@ h3 {
     padding: 2rem 3rem;
   }
 }
-
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   .header__title {
     font-size: 1rem;
   }
 }
-
 .header__nav {
   display: flex;
   justify-content: flex-end;
@@ -104,8 +102,7 @@ h3 {
   color: inherit;
   font-weight: 600;
 }
-
-.header__contact-btn {
+.header__btn--contact {
   font-family: "DM Sans", sans-serif;
   font-size: 16px;
   font-weight: 700;
@@ -118,11 +115,11 @@ h3 {
   transition: color 0.3s ease;
   font-size: 1.2rem;
 }
-.header__contact-btn:hover {
+.header__btn--contact:hover {
   color: #D5896F;
 }
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
-  .header__contact-btn {
+  .header__btn--contact {
     font-size: 1rem;
   }
 }
@@ -151,7 +148,6 @@ h3 {
     padding: 0 50px;
   }
 }
-
 .intro__name {
   display: flex;
   grid-area: intro-container-name;
@@ -168,7 +164,6 @@ h3 {
     margin: 0 5%;
   }
 }
-
 .intro__summary {
   display: flex;
   grid-area: intro-container-summary;
@@ -184,7 +179,6 @@ h3 {
     margin: 0 5%;
   }
 }
-
 .intro__image {
   display: none;
   grid-area: intro-container-image;
@@ -229,7 +223,6 @@ h3 {
     justify-content: center;
   }
 }
-
 .about__image-container {
   display: flex;
   justify-content: center;
@@ -246,20 +239,17 @@ h3 {
     width: 85%;
   }
 }
-
 .about__image {
   width: 80%;
   border-radius: 15px;
   margin-top: 8%;
 }
-
 .about__text-container {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
 .about__title {
   display: flex;
   flex-direction: column;
@@ -277,7 +267,6 @@ h3 {
     align-self: flex-start;
   }
 }
-
 .about__paragraph {
   display: flex;
   flex-direction: column;
@@ -368,14 +357,15 @@ h3 {
 .projects {
   display: flex;
   flex-direction: column;
-  padding: 0;
-  flex-wrap: wrap;
   margin: 2rem 2rem;
 }
 @media only screen and (min-width: 1025px) {
   .projects {
     padding: 1.5rem;
   }
+}
+.projects__title {
+  margin: 4rem 0;
 }
 .projects__cards-container {
   display: grid;
@@ -405,15 +395,12 @@ h3 {
     padding: 20px;
   }
 }
-
 .projects__card-details {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   width: 90%;
-  justify-content: center;
 }
-
 .projects__card-color-block {
   background-color: #DAB785;
   aspect-ratio: 3/2;
@@ -422,15 +409,12 @@ h3 {
   align-items: center;
   flex-wrap: wrap;
 }
-
 .projects__card-btns {
   display: flex;
   justify-content: left;
   gap: 1rem;
 }
-
-.projects__code-btn,
-.projects__preview-btn {
+.projects__btn--code {
   font-family: "DM Sans", sans-serif;
   font-size: 16px;
   font-weight: 700;
@@ -444,11 +428,26 @@ h3 {
   display: inline-flex;
   margin: 0;
 }
-.projects__code-btn:hover,
-.projects__preview-btn:hover {
+.projects__btn--code:hover {
   color: #D5896F;
 }
-
+.projects__btn--preview {
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.36px;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  display: inline-flex;
+  margin: 0;
+}
+.projects__btn--preview:hover {
+  color: #657153;
+}
 .projects__code-icon {
   width: 20px;
   display: inline-block;
