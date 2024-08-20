@@ -1,9 +1,7 @@
 @import "./button.scss";
 @import "./palette.scss";
 @import "./media.scss";
-@import "./font-styles.scss"
-
-
+@import "./font-styles.scss";
 
 // GLOBAL STYLES -------------------
 
@@ -58,6 +56,7 @@ h3 {
     background-color: white;
     padding: 20px 0;
     border-bottom: 2px solid $green;
+    z-index: 1000;
 
     @include laptop-desktop {
         display: flex;
@@ -115,17 +114,15 @@ h3 {
             color: inherit;
             font-weight: 600;
         }
+    }
 
+    &__btn--contact {
+        @include button-style($orange);
+        font-size: 1.2rem;
 
+        @include tablet {
+            font-size: 1rem;
         }
-
-        &__btn--contact {
-            @include button-style($orange);
-            font-size: 1.2rem;
-
-            @include tablet {
-                font-size: 1rem;
-            }
     }
 }
 
@@ -414,12 +411,30 @@ h3 {
     }
 
     &__card-color-block {
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
         background-color: $tan;
+        border-radius: 10px;
         aspect-ratio: 3 / 2;
         display: flex;
-        justify-content: center;
-        align-items: center;
         flex-wrap: wrap;
+        z-index: 1;
+        justify-content: center;
+    }
+
+    &__image {
+        position: absolute;
+        bottom: 0;
+        z-index: 2;
+        max-width: 90%;
+        height: auto;
+        align-self: center;
+        border: 2px solid white;
+        border-radius: 10px;
+        margin-bottom: 0;
     }
 
     &__card-btns {

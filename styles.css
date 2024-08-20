@@ -44,6 +44,7 @@ h3 {
   background-color: white;
   padding: 20px 0;
   border-bottom: 2px solid #657153;
+  z-index: 1000;
 }
 @media only screen and (min-width: 1025px) {
   .header {
@@ -402,12 +403,29 @@ h3 {
   width: 90%;
 }
 .projects__card-color-block {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-color: #DAB785;
+  border-radius: 10px;
   aspect-ratio: 3/2;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
+  z-index: 1;
+  justify-content: center;
+}
+.projects__image {
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  max-width: 90%;
+  height: auto;
+  align-self: center;
+  border: 2px solid white;
+  border-radius: 10px;
+  margin-bottom: 0;
 }
 .projects__card-btns {
   display: flex;
