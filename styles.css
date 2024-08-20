@@ -39,13 +39,30 @@ h3 {
 
 .header {
   display: none;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  padding: 20px 0;
+  border-bottom: 2px solid #657153;
 }
 @media only screen and (min-width: 1025px) {
   .header {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
     margin: 2rem 5rem;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .header {
+    display: flex;
+    margin: 2rem 3rem;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .header__title {
+    font-size: 1rem;
   }
 }
 
@@ -54,9 +71,19 @@ h3 {
   justify-content: flex-end;
   align-items: center;
 }
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .header__nav {
+    justify-content: center;
+  }
+}
 .header__nav-list {
   display: flex;
   gap: 5rem;
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .header__nav-list {
+    gap: 2rem;
+  }
 }
 .header__nav-item {
   font-family: "DM Sans", sans-serif;
@@ -68,6 +95,11 @@ h3 {
 }
 .header__nav-item:hover {
   color: #D5896F;
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .header__nav-item {
+    font-size: 1rem;
+  }
 }
 .header__nav-link {
   text-decoration: none;
@@ -90,6 +122,11 @@ h3 {
 }
 .header__contact-btn:hover {
   color: #D5896F;
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .header__contact-btn {
+    font-size: 1rem;
+  }
 }
 
 .intro {
@@ -362,7 +399,6 @@ h3 {
 }
 
 .projects__card {
-  position: relative;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
