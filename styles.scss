@@ -4,7 +4,7 @@
 
 $font-family-primary: "DM Sans", sans-serif;
 $font-size-primary: 1rem;
-$font-size-primary-large: 1.4rem;
+$font-size-primary-large: 1.3rem;
 $font-size-small: 1.2rem;
 $font-size-heading: 1.5rem;
 $font-size-h2: 2rem;
@@ -101,12 +101,13 @@ h3 {
 // ---------- INTRO SECTION ----------
 
 .intro {
+    margin: 3rem 1rem;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
         "intro-container-name"
         "intro-container-summary";
-    margin: 8rem 3rem;
+    
     grid-gap: 2rem;
 
     // width: 100%;
@@ -121,7 +122,7 @@ h3 {
         grid-template-areas:
             "intro-container-name intro-container-image"
             "intro-container-summary intro-container-image";
-
+            margin: 8rem 3rem;
         // margin: 0 5rem;
         padding: 0 100px;
     }
@@ -230,6 +231,8 @@ h3 {
 
     @include laptop-desktop {
         flex-direction: row;
+        margin: 3rem 5rem;
+        justify-content: center;
     }
 
     @include tablet {
@@ -243,15 +246,23 @@ h3 {
     justify-content: center;
     align-items: center;
     width: 100%;
+
+    @include laptop-desktop {
+        width: 90%;
+    }
+
+    @include tablet {
+        width: 85%;
+    }
 }
 
 .about__image {
     width: 80%;
     border-radius: 15px;
-    margin-top: 10%;
+    margin-top: 8%;
 
     @include laptop-desktop {
-        width: 100%;
+        // width: 90%;
     }
 }
 
@@ -260,6 +271,10 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    // @include laptop-desktop {
+    //     padding: 0 5%;
+    // }
 }
 
 .about__title {
@@ -268,6 +283,14 @@ h3 {
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 1rem;
+
+    @include laptop-desktop {
+        align-self: flex-start;
+    }
+
+    @include tablet {
+        align-self: flex-start;
+    }
 }
 
 .about__paragraph {
@@ -278,6 +301,12 @@ h3 {
     flex-wrap: wrap;
 
     @include laptop-desktop {
+        text-align: left;
+        width: 95%;
+    }
+
+    
+    @include tablet {
         text-align: left;
     }
 }

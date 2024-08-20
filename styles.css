@@ -11,7 +11,7 @@ main {
 }
 @media only screen and (min-width: 1025px) {
   main {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -93,10 +93,10 @@ h3 {
 }
 
 .intro {
+  margin: 3rem 1rem;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "intro-container-name" "intro-container-summary";
-  margin: 8rem 3rem;
   grid-gap: 2rem;
 }
 @media only screen and (min-width: 1025px) {
@@ -104,6 +104,7 @@ h3 {
     grid-gap: 1rem;
     grid-template-columns: minmax(50%, 90%) minmax(50%, 10%);
     grid-template-areas: "intro-container-name intro-container-image" "intro-container-summary intro-container-image";
+    margin: 8rem 3rem;
     padding: 0 100px;
   }
 }
@@ -128,7 +129,7 @@ h3 {
 }
 @media only screen and (min-width: 1025px) {
   .intro__name {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -182,6 +183,8 @@ h3 {
 @media only screen and (min-width: 1025px) {
   .about {
     flex-direction: row;
+    margin: 3rem 5rem;
+    justify-content: center;
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
@@ -197,18 +200,22 @@ h3 {
   align-items: center;
   width: 100%;
 }
+@media only screen and (min-width: 1025px) {
+  .about__image-container {
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .about__image-container {
+    width: 85%;
+  }
+}
 
 .about__image {
   width: 80%;
   border-radius: 15px;
-  margin-top: 10%;
+  margin-top: 8%;
 }
-@media only screen and (min-width: 1025px) {
-  .about__image {
-    width: 100%;
-  }
-}
-
 .about__text-container {
   width: 100%;
   display: flex;
@@ -223,6 +230,16 @@ h3 {
   flex-wrap: wrap;
   margin-bottom: 1rem;
 }
+@media only screen and (min-width: 1025px) {
+  .about__title {
+    align-self: flex-start;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .about__title {
+    align-self: flex-start;
+  }
+}
 
 .about__paragraph {
   display: flex;
@@ -232,6 +249,12 @@ h3 {
   flex-wrap: wrap;
 }
 @media only screen and (min-width: 1025px) {
+  .about__paragraph {
+    text-align: left;
+    width: 95%;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
   .about__paragraph {
     text-align: left;
   }
