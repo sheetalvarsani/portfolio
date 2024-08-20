@@ -12,14 +12,8 @@
     }
 }
 
-// @mixin laptop {
-//     @media only screen and (min-width: ($sm + 1px)) and (max-width: $md) {
-//         @content;
-//     }
-// }
-
-// @mixin desktop{
-//     @media only screen and (min-width: ($md + 1px)) {
-//         @content;
-//     }
-// }
+@mixin laptop-desktop {
+    @media only screen and (min-width: ($md + 1px)){
+        @content;
+    }
+}
