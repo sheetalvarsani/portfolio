@@ -107,7 +107,7 @@ h3 {
     grid-template-areas:
         "intro-container-name"
         "intro-container-summary";
-    
+
     grid-gap: 2rem;
 
     // width: 100%;
@@ -118,34 +118,29 @@ h3 {
 
     @include laptop-desktop {
         grid-gap: 1rem;
-        grid-template-columns: minmax(50%, 90%) minmax(50%,10%);
+        grid-template-columns: minmax(50%, 90%) minmax(50%, 10%);
         grid-template-areas:
             "intro-container-name intro-container-image"
             "intro-container-summary intro-container-image";
-            margin: 8rem 3rem;
+        margin: 8rem 3rem;
         // margin: 0 5rem;
         padding: 0 100px;
     }
 
     @include tablet {
         // grid-template-columns: minmax(0, 80%) minmax(40%, 50%);
-        grid-template-columns: minmax(50%, 90%) minmax(50%,10%);
+        grid-template-columns: minmax(50%, 90%) minmax(50%, 10%);
         grid-template-areas:
             "intro-container-name intro-container-image"
             "intro-container-summary intro-container-image";
         // margin: 0 5%;
- 
 
         grid-gap: 1rem;
-
-
 
         // margin: 0 5rem;
         padding: 0 50px;
     }
 }
-
-
 
 .intro__name {
     display: flex;
@@ -154,7 +149,7 @@ h3 {
     font-weight: 500;
     margin-top: 5%;
     // justify-content:flex-end;
-    align-items:end;
+    align-items: end;
     // align-items: center;
     flex-wrap: wrap;
     overflow: hidden;
@@ -183,12 +178,10 @@ h3 {
     }
 }
 
-
-
 .intro__image {
     display: none;
     grid-area: intro-container-image;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     padding: 0 2rem;
     flex-wrap: wrap;
@@ -223,7 +216,7 @@ h3 {
 .about {
     display: flex;
     flex-direction: column;
-    margin: 3rem 1rem;
+    margin: 5rem 1rem;
     align-items: center;
     justify-content: space-between;
     text-align: center;
@@ -305,7 +298,6 @@ h3 {
         width: 95%;
     }
 
-    
     @include tablet {
         text-align: left;
     }
@@ -314,7 +306,11 @@ h3 {
 // ---------- SKILLS SECTION ----------
 
 .skills {
-    margin: 3rem 1rem;
+    margin: 5rem 1rem;
+
+    @include laptop-desktop {
+        margin-top: 8rem;
+    }
 
     @include tablet {
         padding: 0 5%;
@@ -330,16 +326,27 @@ h3 {
 
     &__icon-row {
         gap: 1.5rem;
+        margin: 2% 10%;
         margin-top: 2.5rem;
-        gap: 0;
+
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        column-gap: 0;
 
         @include laptop-desktop {
             grid-template-columns: repeat(9, 1fr);
             // width: 70%; // removed: was changing the alignment
             gap: 0;
             margin: 2% 10%;
+        }
+
+        @include tablet {
+            grid-template-columns: repeat(9, 1fr);
+            // width: 70%; // removed: was changing the alignment
+            gap: 0;
+            margin: 2% 20%;
+            align-content: center;
         }
     }
 
@@ -348,12 +355,9 @@ h3 {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        margin-bottom: 2rem;
+        column-gap: 0;
+        margin-bottom: 1rem;
         flex-wrap: wrap;
-
-        @include laptop-desktop {
-            margin-bottom: 6rem;
-        }
     }
 
     &__icon {
@@ -366,11 +370,7 @@ h3 {
     }
 
     span {
-        font-size: $font-size-small;
-
-        @include laptop-desktop {
-            font-size: 1rem;
-        }
+        font-size: 0.8rem;
     }
 }
 // ---------- PROJECTS SECTION ----------
