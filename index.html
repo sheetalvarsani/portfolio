@@ -10,32 +10,41 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="./styles.css" />
-        <title>Portfolio</title>
+        <title>Portfolio - Sheetal Varsani</title>
+        <link rel="icon" type="image/x-icon" href="./images/favicon/favicon.ico">
     </head>
-    <body>
+    <body id="home">
         <!-- HEADER & NAV -->
         <header class="header">
             <h1 class="header__title">Sheetal Varsani</h1>
             <nav class="header__nav">
                 <ul class="header__nav-list">
-                    <li class="header__nav-item"><a href="#home" class="header__nav-link">Home</a></li>
-                    <li class="header__nav-item"><a href="#about" class="header__nav-link">About</a></li>
-                    <li class="header__nav-item"><a href="#projects" class="header__nav-link">Projects</a></li>
+                    <li class="header__nav-item">
+                        <a href="#home" class="header__nav-link">Home</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#about" class="header__nav-link">About</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#projects" class="header__nav-link"
+                            >Projects</a
+                        >
+                    </li>
                     <li class="header__nav-item">
                         <a href="#footer" class="header__nav-link">
-                            <button class="header__contact-btn">Get In Touch</button>
+                            <button class="header__contact-btn">
+                                Get In Touch
+                            </button>
                         </a>
                     </li>
                 </ul>
             </nav>
         </header>
 
-        <main id="home">
+        <main>
             <!-- INTRO SECTION -->
             <section class="intro">
-                <div class="intro__name">
-                    👋🏽 Hey! I'm Sheetal Varsani
-                </div>
+                <div class="intro__name">👋🏽 Hey! I'm Sheetal Varsani</div>
                 <div class="intro__summary">
                     A Junior Software Developer based in the UK.
                 </div>
@@ -49,7 +58,7 @@
             </section>
 
             <!-- ABOUT SECTION -->
-            <section class="about">
+            <section class="about" id="about">
                 <div class="about__image-container">
                     <img
                         class="about__image"
@@ -57,23 +66,24 @@
                         alt="photograph of Sheetal Varsani"
                     />
                 </div>
-            
+
                 <div class="about__text-container">
                     <div class="about__title">
                         <h2>About Me</h2>
                     </div>
                     <div class="about__paragraph">
                         <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                            Officia dignissimos ipsa veniam maiores praesentium eum 
-                            voluptates perferendis tempora repudiandae aliquid alias 
-                            odit fugiat excepturi a repellat rerum, distinctio error 
-                            tempore Lorem ipsum dolor sit, amet consectetur adipisicing 
-                            elit.
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Officia dignissimos ipsa veniam maiores
+                            praesentium eum voluptates perferendis tempora
+                            repudiandae aliquid alias odit fugiat excepturi a
+                            repellat rerum, distinctio error tempore Lorem ipsum
+                            dolor sit, amet consectetur adipisicing elit.
                             <br /><br />
-                            Accusamus minima, consequatur in quam aspernatur qui officiis, 
-                            illum nemo omnis optio minus? Deleniti itaque porro veniam alias 
-                            nisi quod quaerat aspernatur?
+                            Accusamus minima, consequatur in quam aspernatur qui
+                            officiis, illum nemo omnis optio minus? Deleniti
+                            itaque porro veniam alias nisi quod quaerat
+                            aspernatur?
                         </p>
                     </div>
                 </div>
@@ -91,7 +101,7 @@
                     <div class="skills__icon-container">
                         <img
                             class="skills__icon"
-                            src="./images/git-icon.png"
+                            src="./images/skills/git-icon.png"
                             alt="GIT logo"
                         />
                         <span>GIT</span>
@@ -99,7 +109,7 @@
                     <div class="skills__icon-container">
                         <img
                             class="skills__icon"
-                            src="./images/html5-icon.png"
+                            src="./images/skills/html5-icon.png"
                             alt="HTML5 logo"
                         />
                         <span>HTML5</span>
@@ -107,7 +117,7 @@
                     <div class="skills__icon-container">
                         <img
                             class="skills__icon"
-                            src="./images/css3-icon.png"
+                            src="./images/skills/css3-icon.png"
                             alt="CSS3 logo"
                         />
                         <span>CSS3</span>
@@ -115,7 +125,7 @@
                     <div class="skills__icon-container">
                         <img
                             class="skills__icon"
-                            src="./images/js-icon.png"
+                            src="./images/skills/js-icon.png"
                             alt="JavaScript logo"
                         />
                         <span>JAVASCRIPT</span>
@@ -123,7 +133,7 @@
                     <div class="skills__icon-container">
                         <img
                             class="skills__icon"
-                            src="./images/scss-icon.png"
+                            src="./images/skills/scss-icon.png"
                             alt="SCSS logo"
                         />
                         <span>SCSS</span>
@@ -131,7 +141,7 @@
                     <div class="skills__icon-container">
                         <img
                             class="skills__icon"
-                            src="./images/bem-icon.png"
+                            src="./images/skills/bem-icon.png"
                             alt="BEM logo"
                         />
                         <span>BEM</span>
@@ -139,7 +149,7 @@
                     <div class="skills__icon-container">
                         <img
                             class="skills__icon"
-                            src="./images/react-icon.png"
+                            src="./images/skills/react-icon.png"
                             alt="React logo"
                         />
                         <span>REACT</span>
@@ -147,7 +157,7 @@
                     <div class="skills__icon-container">
                         <img
                             class="skills__icon"
-                            src="./images/java-icon.png"
+                            src="./images/skills/java-icon.png"
                             alt="Java logo"
                         />
                         <span>JAVA</span>
@@ -155,7 +165,7 @@
                     <div class="skills__icon-container">
                         <img
                             class="skills__icon"
-                            src="./images/springboot-icon.png"
+                            src="./images/skills/springboot-icon.png"
                             alt="Spring boot logo"
                         />
                         <span>SPRING BOOT</span>
@@ -165,9 +175,9 @@
 
             <!-- PROJECTS SECTION -->
 
-            <section class="projects">
+            <section class="projects" id="projects">
                 <h2>My Projects</h2>
-            
+
                 <div class="projects__cards-container">
                     <div class="projects__card">
                         <div class="projects__card-details">
@@ -175,7 +185,8 @@
                             <p>REACT</p>
                             <h3>Client Project</h3>
                             <p class="projects__card-description">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Lorem ipsum, dolor sit amet consectetur
+                                adipisicing elit.
                             </p>
                             <div class="projects__card-btns">
                                 <button class="projects__code-btn">
@@ -199,10 +210,9 @@
                     </div>
                 </div>
             </section>
-            
         </main>
 
-        <footer class="footer" >
+        <footer class="footer" id="footer">
             <div class="footer__container">
                 <p>sheetalvarsani@hotmail.co.uk</p>
                 <div class="footer-icon-row">

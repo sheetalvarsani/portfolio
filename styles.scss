@@ -54,23 +54,50 @@ h3 {
 
 .header {
     display: none;
+    
+    align-items: center;
+    justify-content: space-between;
+    position: sticky; top: 0;
+    background-color: white;
+    padding: 20px 0;
+    border-bottom: 2px solid $green;
 
     @include laptop-desktop {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
         margin: 2rem 5rem;
     }
+
+    @include tablet {
+display: flex;
+        margin: 2rem 3rem;
+    }
+}
+
+.header__title {
+    @include tablet {
+        font-size: 1rem;
+    }
+
 }
 
 .header__nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    
+
+    @include tablet {
+        justify-content: center;
+    }
 
     &-list {
         display: flex;
         gap: 5rem;
+
+        @include tablet {
+            gap: 2rem;
+        }
+    
     }
 
     &-item {
@@ -84,6 +111,10 @@ h3 {
         &:hover {
             color: $orange;
         }
+
+        @include tablet {
+            font-size: 1rem;
+        }
     }
 
     &-link {
@@ -96,6 +127,10 @@ h3 {
 .header__contact-btn {
     @include button-style($orange);
     font-size: $font-size-small;
+
+    @include tablet {
+        font-size: 1rem;
+    }
 }
 
 // ---------- INTRO SECTION ----------
@@ -408,7 +443,7 @@ h3 {
 }
 
 .projects__card {
-    position: relative;
+
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
