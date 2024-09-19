@@ -3,12 +3,9 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-            rel="stylesheet"
-        />
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
+        </style>
         <link rel="stylesheet" href="./styles/styles.css" />
         <title>Portfolio - Sheetal Varsani</title>
         <link
@@ -166,14 +163,6 @@
                         />
                         <span>JAVA</span>
                     </div>
-                    <div class="skills__icon-container">
-                        <img
-                            class="skills__icon"
-                            src="./images/skills/springboot-icon.png"
-                            alt="Spring boot logo"
-                        />
-                        <span>SPRING BOOT</span>
-                    </div>
                 </div>
             </section>
 
@@ -184,9 +173,54 @@
 
                 <div class="projects__cards-container">
                     <div class="projects__card-details">
-                        <div class="projects__card-color-block"><img class="projects__image" src="./images/mock-website.jpg" alt="Mock Website"/></div>
-                        
-                        <p>REACT</p>
+                        <div class="projects__card-color-block">
+                            <img
+                                class="projects__image"
+                                src="./images/tic-tac-dough-project.png"
+                                alt="Project Website"
+                            />
+                        </div>
+
+                        <p class="projects__language">TYPESCRIPT</p>
+                        <h3>Tic-Tac-Toe Game</h3>
+                        <p class="projects__card-description">
+                            A digital version of the classic Tic-Tac-Toe game,
+                            built using TypeScript, HTML, and SCSS.
+                        </p>
+                        <div
+                            class="projects__card-btns"
+                            onclick="window.open('https://github.com/sheetalvarsani/tic-tac-dough', '_blank')"
+                        >
+                            <button class="projects__btn--code">
+                                Code
+                                <img
+                                    class="projects__code-icon"
+                                    src="./images/code.png"
+                                    alt="Code Icon"
+                                />
+                            </button>
+                            <button
+                                class="projects__btn--preview"
+                                onclick="window.open('https://sheetalvarsani.github.io/tic-tac-dough/', '_blank')"
+                            >
+                                Preview
+                                <img
+                                    class="projects__code-icon"
+                                    src="./images/code.png"
+                                    alt="Code Icon"
+                                />
+                            </button>
+                        </div>
+                    </div>
+                    <div class="projects__card-details">
+                        <div class="projects__card-color-block">
+                            <img
+                                class="projects__image"
+                                src="./images/mock-website.jpg"
+                                alt="Mock Website"
+                            />
+                        </div>
+                        <p class="projects__language">REACT</p>
                         <h3>Client Project</h3>
                         <p class="projects__card-description">
                             Lorem ipsum, dolor sit amet consectetur adipisicing
@@ -212,8 +246,14 @@
                         </div>
                     </div>
                     <div class="projects__card-details">
-                        <div class="projects__card-color-block"><img class="projects__image" src="./images/mock-website.jpg" alt="Mock Website"/></div>
-                        <p>REACT</p>
+                        <div class="projects__card-color-block">
+                            <img
+                                class="projects__image"
+                                src="./images/mock-website.jpg"
+                                alt="Mock Website"
+                            />
+                        </div>
+                        <p class="projects__language">REACT</p>
                         <h3>Client Project</h3>
                         <p class="projects__card-description">
                             Lorem ipsum, dolor sit amet consectetur adipisicing
@@ -239,8 +279,14 @@
                         </div>
                     </div>
                     <div class="projects__card-details">
-                        <div class="projects__card-color-block"><img class="projects__image" src="./images/mock-website.jpg" alt="Mock Website"/></div>
-                        <p>REACT</p>
+                        <div class="projects__card-color-block">
+                            <img
+                                class="projects__image"
+                                src="./images/mock-website.jpg"
+                                alt="Mock Website"
+                            />
+                        </div>
+                        <p class="projects__language">REACT</p>
                         <h3>Client Project</h3>
                         <p class="projects__card-description">
                             Lorem ipsum, dolor sit amet consectetur adipisicing
@@ -266,8 +312,14 @@
                         </div>
                     </div>
                     <div class="projects__card-details">
-                        <div class="projects__card-color-block"><img class="projects__image" src="./images/mock-website.jpg" alt="Mock Website"/></div>
-                        <p>REACT</p>
+                        <div class="projects__card-color-block">
+                            <img
+                                class="projects__image"
+                                src="./images/mock-website.jpg"
+                                alt="Mock Website"
+                            />
+                        </div>
+                        <p class="projects__language">REACT</p>
                         <h3>Client Project</h3>
                         <p class="projects__card-description">
                             Lorem ipsum, dolor sit amet consectetur adipisicing
@@ -293,35 +345,14 @@
                         </div>
                     </div>
                     <div class="projects__card-details">
-                        <div class="projects__card-color-block"><img class="projects__image" src="./images/mock-website.jpg" alt="Mock Website"/></div>
-                        <p>REACT</p>
-                        <h3>Client Project</h3>
-                        <p class="projects__card-description">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit.
-                        </p>
-                        <div class="projects__card-btns">
-                            <button class="projects__btn--code">
-                                Code
-                                <img
-                                    class="projects__code-icon"
-                                    src="./images/code.png"
-                                    alt="Code Icon"
-                                />
-                            </button>
-                            <button class="projects__btn--preview">
-                                Preview
-                                <img
-                                    class="projects__code-icon"
-                                    src="./images/code.png"
-                                    alt="Code Icon"
-                                />
-                            </button>
+                        <div class="projects__card-color-block">
+                            <img
+                                class="projects__image"
+                                src="./images/mock-website.jpg"
+                                alt="Mock Website"
+                            />
                         </div>
-                    </div>
-                    <div class="projects__card-details">
-                        <div class="projects__card-color-block"><img class="projects__image" src="./images/mock-website.jpg" alt="Mock Website"/></div>
-                        <p>REACT</p>
+                        <p class="projects__language">REACT</p>
                         <h3>Client Project</h3>
                         <p class="projects__card-description">
                             Lorem ipsum, dolor sit amet consectetur adipisicing

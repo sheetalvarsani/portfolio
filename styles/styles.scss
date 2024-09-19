@@ -25,14 +25,19 @@ main {
 }
 
 h1 {
-    font-size: $font-size-heading;
-    font-weight: 700;
+    font-size: 3rem;
+    font-weight: 600;
+    
+    @include tablet {
+        font-size: 2rem;
+    }
 }
 
 h2 {
     font-size: 2rem;
     font-weight: 600;
     text-align: center;
+    margin-bottom: 0.5rem;
 
     @include laptop-desktop {
         font-size: 2.5rem;
@@ -56,23 +61,21 @@ h3 {
     background-color: white;
     padding: 20px 0;
     border-bottom: 2px solid $green;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
     z-index: 1000;
-
-    @include laptop-desktop {
-        display: flex;
-        padding: 2rem 5rem;
-    }
 
     @include tablet {
         display: flex;
         padding: 2rem 3rem;
+      
     }
 
-    &__title {
-        @include tablet {
-            font-size: 1rem;
-        }
+    @include laptop-desktop {
+        display: flex;
+        padding: 2rem 10rem;
     }
+
+
 
     &__nav {
         display: flex;
@@ -117,7 +120,7 @@ h3 {
     }
 
     &__btn--contact {
-        @include button-style($orange);
+        @include button-style($green);
         font-size: 1.2rem;
 
         @include tablet {
@@ -135,18 +138,8 @@ h3 {
     grid-template-areas:
         "intro-container-name"
         "intro-container-summary";
-
+    text-align: center;
     grid-gap: 2rem;
-
-    @include laptop-desktop {
-        grid-gap: 1rem;
-        grid-template-columns: minmax(50%, 90%) minmax(50%, 10%);
-        grid-template-areas:
-            "intro-container-name intro-container-image"
-            "intro-container-summary intro-container-image";
-        margin: 8rem 3rem;
-        padding: 0 100px;
-    }
 
     @include tablet {
         grid-template-columns: minmax(50%, 90%) minmax(50%, 10%);
@@ -155,6 +148,19 @@ h3 {
             "intro-container-summary intro-container-image";
         grid-gap: 1rem;
         padding: 0 50px;
+        text-align: left;
+        margin: 5rem 2rem;
+    }
+
+    @include laptop-desktop {
+        grid-gap: 1rem;
+        grid-template-columns: minmax(50%, 90%) minmax(50%, 10%);
+        grid-template-areas:
+            "intro-container-name intro-container-image"
+            "intro-container-summary intro-container-image";
+        margin: 0 8rem 5rem 8rem;
+        padding: 0 5rem;
+        text-align: left;
     }
 
     &__name {
@@ -163,13 +169,22 @@ h3 {
         font-size: $font-size-primary;
         font-weight: 500;
         margin-top: 5%;
-        align-items: end;
+        text-align: center;
+        justify-content: center;
         flex-wrap: wrap;
         overflow: hidden;
+
+        @include tablet {
+            align-items: end;
+            justify-content: left;
+        }
 
         @include laptop-desktop {
             font-size: $font-size-primary-large;
             margin: 0 5%;
+            align-items: end;
+            justify-content: left;
+            padding-top: 3rem;
         }
     }
 
@@ -185,6 +200,8 @@ h3 {
         @include laptop-desktop {
             font-size: 3.5rem;
             margin: 0 5%;
+            align-items: start;
+            padding-top: 2rem;
         }
     }
 
@@ -196,11 +213,12 @@ h3 {
         padding: 0 2rem;
         flex-wrap: wrap;
 
-        @include laptop-desktop {
+        @include tablet {
             display: flex;
         }
 
-        @include tablet {
+        @include laptop-desktop {
+            padding-top: 10rem;
             display: flex;
         }
 
@@ -215,20 +233,21 @@ h3 {
 .about {
     display: flex;
     flex-direction: column;
-    margin: 5rem 2rem;
+    margin: 3rem 2rem;
     align-items: center;
     justify-content: space-between;
     text-align: center;
     gap: 2rem;
 
+    @include tablet {
+        flex-direction: row;
+        justify-content: center;
+        margin: 5rem 2rem;
+    }
+
     @include laptop-desktop {
         flex-direction: row;
         margin: 3rem 5rem;
-        justify-content: center;
-    }
-
-    @include tablet {
-        flex-direction: row;
         justify-content: center;
     }
 
@@ -238,19 +257,29 @@ h3 {
         align-items: center;
         width: 100%;
 
-        @include laptop-desktop {
-            width: 90%;
-        }
-
         @include tablet {
             width: 85%;
+        }
+
+        @include laptop-desktop {
+            width: 90%;
         }
     }
 
     &__image {
         width: 80%;
-        border-radius: 15px;
+        border-radius: 50px;
         margin-top: 8%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        
+        @include tablet {
+            width: 80%;
+        }
+
+        @include laptop-desktop {
+            width: 60%;
+        }
     }
 
     &__text-container {
@@ -265,14 +294,16 @@ h3 {
         flex-direction: column;
         align-items: center;
         flex-wrap: wrap;
-        margin-bottom: 1rem;
-
-        @include laptop-desktop {
-            align-self: flex-start;
-        }
+        margin-bottom: 0.5rem;
 
         @include tablet {
             align-self: flex-start;
+            margin-bottom: 0.2rem;
+        }
+
+        @include laptop-desktop {
+            align-self: flex-start;
+            margin-bottom: 1rem;
         }
     }
 
@@ -282,14 +313,17 @@ h3 {
         text-align: center;
         align-items: center;
         flex-wrap: wrap;
-
-        @include laptop-desktop {
-            text-align: left;
-            width: 95%;
-        }
+        padding: 0 2rem;
 
         @include tablet {
             text-align: left;
+            padding: 0;
+        }
+
+        @include laptop-desktop {
+            text-align: left;
+            width: 80%;
+            padding: 0;
         }
     }
 }
@@ -299,12 +333,12 @@ h3 {
 .skills {
     margin: 5rem 2rem;
 
-    @include laptop-desktop {
-        margin-top: 8rem;
-    }
-
     @include tablet {
         padding: 0 5%;
+    }
+
+    @include laptop-desktop {
+        margin-top: 8rem;
     }
 
     &__text {
@@ -320,21 +354,21 @@ h3 {
         margin: 2% 10%;
         margin-top: 2.5rem;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         justify-content: center;
         column-gap: 0;
 
-        @include laptop-desktop {
-            grid-template-columns: repeat(9, 1fr);
-            gap: 0;
-            margin: 2% 10%;
-        }
-
         @include tablet {
-            grid-template-columns: repeat(9, 1fr);
+            grid-template-columns: repeat(8, 1fr);
             gap: 0;
             margin: 2% 20%;
             align-content: center;
+        }
+
+        @include laptop-desktop {
+            grid-template-columns: repeat(8, 1fr);
+            gap: 0;
+            margin: 2% 15%;
         }
     }
 
@@ -366,10 +400,17 @@ h3 {
 .projects {
     display: flex;
     flex-direction: column;
-    margin: 2rem 2rem;
+    margin: 2rem 4rem;
+
+    @include tablet {
+        padding: 1.5rem;
+        margin: 2rem 4rem;
+    }
 
     @include laptop-desktop {
         padding: 1.5rem;
+        margin: 2rem 10rem;
+        
     }
 
     &__title {
@@ -382,17 +423,9 @@ h3 {
         align-content: center;
         justify-content: center;
         justify-items: center;
-        gap: 7rem;
+        gap: 5rem;
         padding: 0;
         margin: 0 auto;
-
-        @include laptop-desktop {
-            grid-template-columns: repeat(3, 1fr);
-            margin: 0;
-            justify-items: center;
-            gap: 5rem;
-            padding: 20px;
-        }
 
         @include tablet {
             grid-template-columns: repeat(2, 1fr);
@@ -401,13 +434,14 @@ h3 {
             gap: 5rem;
             padding: 20px;
         }
-    }
 
-    &__card-details {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        width: 90%;
+        @include laptop-desktop {
+            grid-template-columns: repeat(3, 1fr);
+            margin: 0;
+            justify-items: center;
+            gap: 5rem;
+            padding: 20px;
+        }
     }
 
     &__card-color-block {
@@ -416,9 +450,9 @@ h3 {
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: $tan;
-        border-radius: 10px;
-        aspect-ratio: 3 / 2;
+        background-color: $green;
+        border-radius: 15px;
+        aspect-ratio: 16 / 10;
         display: flex;
         flex-wrap: wrap;
         z-index: 1;
@@ -427,24 +461,60 @@ h3 {
 
     &__image {
         position: absolute;
-        bottom: 0;
         z-index: 2;
         max-width: 90%;
         height: auto;
         align-self: center;
-        border: 2px solid white;
         border-radius: 10px;
         margin-bottom: 0;
     }
 
+    &__language {
+        font-size: 0.8rem;
+        margin-bottom: 5px;
+        font-weight: 800;
+
+        @include laptop-desktop {
+            font-size: 1rem;
+        }
+    }
+
+    
+    &__card-details {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        margin-bottom: 3rem;
+        text-align: center;
+
+        @include tablet {
+            width: 90%;
+        }
+
+        @include laptop-desktop {
+            width: 90%;
+            text-align: left;
+        }
+    }
+
     &__card-btns {
         display: flex;
-        justify-content: left;
+        justify-content: center;
         gap: 1rem;
+
+        @include tablet {
+            justify-content: center;
+        }
+
+        @include laptop-desktop {
+            justify-content: left;
+        }
+        
     }
 
     &__btn--code {
-        @include button-style($orange);
+        @include button-style($brown);
         display: inline-flex;
         margin: 0;
     }
