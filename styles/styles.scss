@@ -438,6 +438,8 @@ h3 {
         border-radius: 10px;
         margin-bottom: 0;
         border: 1px solid $black;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
     }
 
     &__language {
@@ -465,6 +467,13 @@ h3 {
         @include laptop-desktop {
             width: 90%;
             text-align: left;
+        }
+    }
+    &__card-description {
+        @include laptop-desktop {
+            font-size: 1.1rem;
+            min-height: 5rem;
+            margin: 0;
         }
     }
 

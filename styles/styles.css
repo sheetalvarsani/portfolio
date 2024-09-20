@@ -9,7 +9,7 @@ main {
 }
 @media only screen and (min-width: 1025px) {
   main {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -426,6 +426,9 @@ h3 {
   border-radius: 10px;
   margin-bottom: 0;
   border: 1px solid #242322;
+  aspect-ratio: 16/9;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .projects__language {
   font-size: 0.8rem;
@@ -454,6 +457,13 @@ h3 {
   .projects__card-details {
     width: 90%;
     text-align: left;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .projects__card-description {
+    font-size: 1.1rem;
+    min-height: 5rem;
+    margin: 0;
   }
 }
 .projects__card-btns {
