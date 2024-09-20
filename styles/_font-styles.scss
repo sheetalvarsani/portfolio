@@ -1,5 +1,7 @@
+@import "./palette.scss";
+
 $font-family-primary: "Crimson Text", serif;
 $font-size-primary: 1rem;
 $font-size-primary-large: 1.3rem;
 $font-size-heading: 1.5rem;
-$font-color-primary: black;
+$font-color-primary:$black;
