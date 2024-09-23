@@ -279,7 +279,7 @@ h3 {
 // ---------- SKILLS SECTION ----------
 
 .skills {
-    margin: 5rem 4rem 5rem 4rem;
+    margin: 5rem 3rem 5rem 3rem;
 
     @include tablet {
         padding: 1.5rem;
@@ -319,8 +319,7 @@ h3 {
 
     &__icon-row {
         gap: 1.5rem;
-        margin: 2% 10%;
-        margin-top: 2.5rem;
+        margin: 3rem 4rem 0 4rem;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         justify-content: center;
@@ -329,14 +328,14 @@ h3 {
         @include tablet {
             grid-template-columns: repeat(8, 1fr);
             gap: 0;
-            margin: 2% 20%;
+            margin: 3rem 1rem 0 1rem;
             align-content: center;
         }
 
         @include laptop-desktop {
             grid-template-columns: repeat(8, 1fr);
             gap: 0;
-            margin: 2% 15%;
+            margin: 3rem 10rem 0 10rem;
         }
     }
 
@@ -369,7 +368,7 @@ h3 {
 .projects {
     display: flex;
     flex-direction: column;
-    margin: 2rem 4rem 5rem 4rem;
+    margin: 2rem 3rem 5rem 3rem;
 
     @include tablet {
         padding: 1.5rem;
