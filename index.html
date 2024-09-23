@@ -3,9 +3,11 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <style>
-            @import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
-        </style>
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+        />
+
         <link rel="stylesheet" href="./styles/styles.css" />
         <title>Portfolio - Sheetal Varsani</title>
         <link
@@ -49,13 +51,6 @@
                 <div class="intro__summary">
                     A Junior Software Developer based in the UK.
                 </div>
-                <!-- <div class="intro__image"> -->
-                <!-- <img
-                        src="./images/developer-graphic.png"
-                        style="width: 400px"
-                        alt="woman working at computer with plants"
-                    />
-                </div> -->
                 <hr class="intro__divider" />
             </section>
 
@@ -91,10 +86,12 @@
                 </div>
             </section>
 
+
             <!-- SKILLS SECTION -->
             <section class="skills">
+                <hr class="skills__divider" />
                 <div class="skills__text">
-                    <h2>Technical Skills</h2>
+                    <h2 class="skills__header">Technical Skills</h2>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </p>
@@ -170,6 +167,8 @@
             <!-- PROJECTS SECTION -->
 
             <section class="projects" id="projects">
+                <hr class="projects__divider" />
+
                 <h2 class="projects__header">My Projects</h2>
 
                 <div class="projects__cards-container">
@@ -178,7 +177,7 @@
                             <img
                                 class="projects__image"
                                 src="./images/tic-tac-dough-project.png"
-                                alt="Project Screenshot"
+                                alt="Screenshot of Tic Tac Toe Project"
                             />
                         </div>
 
@@ -188,7 +187,7 @@
                             A digital version of the classic Tic-Tac-Toe game,
                             built using TypeScript, HTML, and SCSS.
                         </p>
-                        <div class="projects__btns">
+                        <div class="projects__btn">
                             <button
                                 class="projects__btn--code"
                                 onclick="window.open('https://github.com/sheetalvarsani/tic-tac-dough', '_blank')"
@@ -218,17 +217,17 @@
                             <img
                                 class="projects__image"
                                 src="./images/asteroid-watch-project.png"
-                                alt="Project Screenshot"
+                                alt="Screenshot of Asteroid API Project"
                             />
                         </div>
                         <p class="projects__language">REACT</p>
                         <h3 class="projects__title">Asteroid Watch App</h3>
                         <p class="projects__description">
-                            A React TypeScript app that allows users to track
+                            A responsive React app that allows users to track
                             and filter near-Earth asteroids using the NASA NeoWs
                             API.
                         </p>
-                        <div class="projects__btns">
+                        <div class="projects__btn">
                             <button
                                 class="projects__btn--code"
                                 onclick="window.open('https://github.com/sheetalvarsani/asteroid-watch', '_blank')"
@@ -258,18 +257,19 @@
                             <img
                                 class="projects__image"
                                 src="./images/calculator-project.png"
-                                alt="Project Screenshot"
+                                alt="Screenshot of Calculator Project"
                             />
                         </div>
                         <p class="projects__language">TYPESCRIPT</p>
                         <h3 class="projects__title">Calculator App</h3>
                         <p class="projects__description">
-                            A calculator app built with TypeScript, SCSS, and HTML for performing basic arithmetic operations.
+                            A calculator app built with TypeScript, SCSS, and
+                            HTML for performing basic arithmetic operations.
                         </p>
-                        <div class="projects__btns">
+                        <div class="projects__btn">
                             <button
                                 class="projects__btn--code"
-                                onclick="window.open('https://github.com/sheetalvarsani/asteroid-watch', '_blank')"
+                                onclick="window.open('https://github.com/sheetalvarsani/calculator-app', '_blank')"
                             >
                                 Code
                                 <img
@@ -280,7 +280,7 @@
                             </button>
                             <button
                                 class="projects__btn--preview"
-                                onclick="window.open('https://sheetalvarsani.github.io/asteroid-watch/', '_blank')"
+                                onclick="window.open('https://sheetalvarsani.github.io/calculator-app/', '_blank')"
                             >
                                 Preview
                                 <img
@@ -293,15 +293,15 @@
                     </div>
                 </div>
             </section>
-        </main>
-
-        <footer class="footer" id="footer">
-            <div class="footer__container">
-                <p>sheetalvarsani@hotmail.co.uk</p>
-                <div class="footer-icon-row">
+            <!-- CONTACT SECTION -->
+            <section class="contact">
+                <div class="contact__text">
+                    <h2>Get In Touch:</h2>
+                </div>
+                <div class="contact__icon-row">
                     <a href="" target="_blank" title="Download CV">
                         <img
-                            class="footer__icon"
+                            class="contact__icon"
                             src="./images/cv-icon.png"
                             alt="CV icon"
                         />
@@ -312,7 +312,7 @@
                         title="GitHub Profile"
                     >
                         <img
-                            class="footer__icon"
+                            class="contact__icon"
                             src="./images/github-icon.png"
                             alt="Github icon"
                         />
@@ -323,12 +323,18 @@
                         title="LinkedIn Profile"
                     >
                         <img
-                            class="footer__icon"
+                            class="contact__icon"
                             src="./images/linkedin-icon.png"
                             alt="Linkedin icon"
                         />
                     </a>
                 </div>
+            </section>
+        </main>
+
+        <footer class="footer" id="footer">
+            <div class="footer__container">
+                <p>© 2024 Sheetal Varsani</p>
             </div>
         </footer>
     </body>
