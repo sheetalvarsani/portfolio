@@ -3,9 +3,11 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <style>
-            @import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
-        </style>
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+        />
+
         <link rel="stylesheet" href="./styles/styles.css" />
         <title>Portfolio - Sheetal Varsani</title>
         <link
@@ -49,13 +51,6 @@
                 <div class="intro__summary">
                     A Junior Software Developer based in the UK.
                 </div>
-                <!-- <div class="intro__image"> -->
-                <!-- <img
-                        src="./images/developer-graphic.png"
-                        style="width: 400px"
-                        alt="woman working at computer with plants"
-                    />
-                </div> -->
                 <hr class="intro__divider" />
             </section>
 
@@ -75,39 +70,46 @@
                     </div>
                     <div class="about__paragraph">
                         <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing
-                            elit. Officia dignissimos ipsa veniam maiores
-                            praesentium eum voluptates perferendis tempora
-                            repudiandae aliquid alias odit fugiat excepturi a
-                            repellat rerum, distinctio error tempore Lorem ipsum
-                            dolor sit, amet consectetur adipisicing elit.
+                            Hi, I’m Sheetal, a Junior Software Engineer with a
+                            background in wedding photography and creative
+                            design. Based in the UK, I bring a strong foundation
+                            in customer service, time management, and teamwork
+                            from my experience as a self-employed photographer.
+                            My transition into software engineering is driven by
+                            my passion for coding and problem-solving, and
+                            combining it with my creative side.
                             <br /><br />
-                            Accusamus minima, consequatur in quam aspernatur qui
-                            officiis, illum nemo omnis optio minus? Deleniti
-                            itaque porro veniam alias nisi quod quaerat
-                            aspernatur?
+                            I’m experienced in HTML, CSS, SASS, JavaScript,
+                            React, and TypeScript, with a focus on building
+                            intuitive and engaging applications. Some of my
+                            recent projects include a React API application and
+                            a browser-based game using TypeScript, where I
+                            combined my technical skills with creativity.
+                            <br /><br />
+                            Outside of coding, I’m an avid crafter and love
+                            sharing my skills through workshops and my online
+                            Etsy shop. I’m always looking for new ways to blend
+                            creativity and technology, and I’m excited to keep
+                            learning and growing in this field.
                         </p>
+                    </div>
+                    <div class="about-btn">
+                        <a href="#footer" class="about__btn-link">
+                            <button class="about__btn--contact">
+                                Get In Touch
+                            </button>
+                        </a>
                     </div>
                 </div>
             </section>
 
             <!-- SKILLS SECTION -->
             <section class="skills">
+                <hr class="skills__divider" />
                 <div class="skills__text">
-                    <h2>Technical Skills</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </p>
+                    <h2 class="skills__header">Technical Skills</h2>
                 </div>
                 <div class="skills__icon-row">
-                    <div class="skills__icon-container">
-                        <img
-                            class="skills__icon"
-                            src="./images/skills/git-icon.png"
-                            alt="GIT logo"
-                        />
-                        <span>GIT</span>
-                    </div>
                     <div class="skills__icon-container">
                         <img
                             class="skills__icon"
@@ -148,6 +150,7 @@
                         />
                         <span>BEM</span>
                     </div>
+
                     <div class="skills__icon-container">
                         <img
                             class="skills__icon"
@@ -164,12 +167,22 @@
                         />
                         <span>JAVA</span>
                     </div>
+                    <div class="skills__icon-container">
+                        <img
+                            class="skills__icon"
+                            src="./images/skills/git-icon.png"
+                            alt="GIT logo"
+                        />
+                        <span>GIT</span>
+                    </div>
                 </div>
             </section>
 
             <!-- PROJECTS SECTION -->
 
             <section class="projects" id="projects">
+                <hr class="projects__divider" />
+
                 <h2 class="projects__header">My Projects</h2>
 
                 <div class="projects__cards-container">
@@ -178,7 +191,7 @@
                             <img
                                 class="projects__image"
                                 src="./images/tic-tac-dough-project.png"
-                                alt="Project Screenshot"
+                                alt="Screenshot of Tic Tac Toe Project"
                             />
                         </div>
 
@@ -188,7 +201,7 @@
                             A digital version of the classic Tic-Tac-Toe game,
                             built using TypeScript, HTML, and SCSS.
                         </p>
-                        <div class="projects__btns">
+                        <div class="projects__btn">
                             <button
                                 class="projects__btn--code"
                                 onclick="window.open('https://github.com/sheetalvarsani/tic-tac-dough', '_blank')"
@@ -218,17 +231,17 @@
                             <img
                                 class="projects__image"
                                 src="./images/asteroid-watch-project.png"
-                                alt="Project Screenshot"
+                                alt="Screenshot of Asteroid API Project"
                             />
                         </div>
                         <p class="projects__language">REACT</p>
                         <h3 class="projects__title">Asteroid Watch App</h3>
                         <p class="projects__description">
-                            A React TypeScript app that allows users to track
+                            A responsive React app that allows users to track
                             and filter near-Earth asteroids using the NASA NeoWs
                             API.
                         </p>
-                        <div class="projects__btns">
+                        <div class="projects__btn">
                             <button
                                 class="projects__btn--code"
                                 onclick="window.open('https://github.com/sheetalvarsani/asteroid-watch', '_blank')"
@@ -258,18 +271,19 @@
                             <img
                                 class="projects__image"
                                 src="./images/calculator-project.png"
-                                alt="Project Screenshot"
+                                alt="Screenshot of Calculator Project"
                             />
                         </div>
                         <p class="projects__language">TYPESCRIPT</p>
                         <h3 class="projects__title">Calculator App</h3>
                         <p class="projects__description">
-                            A calculator app built with TypeScript, SCSS, and HTML for performing basic arithmetic operations.
+                            A calculator app built with TypeScript, SCSS, and
+                            HTML for performing basic arithmetic operations.
                         </p>
-                        <div class="projects__btns">
+                        <div class="projects__btn">
                             <button
                                 class="projects__btn--code"
-                                onclick="window.open('https://github.com/sheetalvarsani/asteroid-watch', '_blank')"
+                                onclick="window.open('https://github.com/sheetalvarsani/calculator-app', '_blank')"
                             >
                                 Code
                                 <img
@@ -280,7 +294,7 @@
                             </button>
                             <button
                                 class="projects__btn--preview"
-                                onclick="window.open('https://sheetalvarsani.github.io/asteroid-watch/', '_blank')"
+                                onclick="window.open('https://sheetalvarsani.github.io/calculator-app/', '_blank')"
                             >
                                 Preview
                                 <img
@@ -293,15 +307,15 @@
                     </div>
                 </div>
             </section>
-        </main>
-
-        <footer class="footer" id="footer">
-            <div class="footer__container">
-                <p>sheetalvarsani@hotmail.co.uk</p>
-                <div class="footer-icon-row">
+            <!-- CONTACT SECTION -->
+            <section class="contact">
+                <div class="contact__text">
+                    <h2>Get In Touch:</h2>
+                </div>
+                <div class="contact__icon-row">
                     <a href="" target="_blank" title="Download CV">
                         <img
-                            class="footer__icon"
+                            class="contact__icon"
                             src="./images/cv-icon.png"
                             alt="CV icon"
                         />
@@ -312,7 +326,7 @@
                         title="GitHub Profile"
                     >
                         <img
-                            class="footer__icon"
+                            class="contact__icon"
                             src="./images/github-icon.png"
                             alt="Github icon"
                         />
@@ -323,12 +337,18 @@
                         title="LinkedIn Profile"
                     >
                         <img
-                            class="footer__icon"
+                            class="contact__icon"
                             src="./images/linkedin-icon.png"
                             alt="Linkedin icon"
                         />
                     </a>
                 </div>
+            </section>
+        </main>
+
+        <footer class="footer" id="footer">
+            <div class="footer__container">
+                <p>© 2024 Sheetal Varsani</p>
             </div>
         </footer>
     </body>
