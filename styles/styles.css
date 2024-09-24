@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: "Crimson Text", serif;
@@ -221,11 +225,17 @@ h3 {
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   .about__image {
     width: 80%;
+    aspect-ratio: 2/3;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 @media only screen and (min-width: 1025px) {
   .about__image {
     width: 60%;
+    aspect-ratio: 3/4;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 .about__text-container {
@@ -275,14 +285,66 @@ h3 {
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   .about__paragraph {
     text-align: left;
+    align-items: flex-start;
     padding: 0;
   }
 }
 @media only screen and (min-width: 1025px) {
   .about__paragraph {
     text-align: left;
+    align-items: flex-start;
     width: 80%;
     padding: 0;
+  }
+}
+.about__btn {
+  display: flex;
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .about__btn {
+    justify-content: flex-start;
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .about__btn {
+    justify-content: flex-start;
+  }
+}
+.about__btn-link {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+}
+.about__btn--contact {
+  font-family: "Crimson Text", serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.36px;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  border: 2px solid #D5896F;
+  margin-top: 2rem;
+}
+.about__btn--contact:hover {
+  border: 2px solid #657153;
+  transform: scale(0.9);
+  transition: 0.2s;
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .about__btn--contact {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .about__btn--contact {
+    display: flex;
+    justify-content: flex-start;
   }
 }
 

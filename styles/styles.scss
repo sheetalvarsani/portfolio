@@ -5,6 +5,10 @@
 
 // GLOBAL STYLES -------------------
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: $font-family-primary;
@@ -161,12 +165,12 @@ h3 {
         border-top: 2px solid $orange;
         width: 50%;
         margin: 20px auto;
-        
     }
 }
 
 // ---------- ABOUT SECTION ----------
 
+// ---------- ABOUT SECTION ----------
 .about {
     display: flex;
     flex-direction: column;
@@ -212,10 +216,14 @@ h3 {
 
         @include tablet {
             width: 80%;
+            aspect-ratio: 2/3;
+            object-fit: cover;
         }
 
         @include laptop-desktop {
             width: 60%;
+            aspect-ratio: 3/4;
+            object-fit: cover;
         }
     }
 
@@ -265,13 +273,49 @@ h3 {
 
         @include tablet {
             text-align: left;
+            align-items: flex-start; // Align text to the left
             padding: 0;
         }
 
         @include laptop-desktop {
             text-align: left;
+            align-items: flex-start; // Align text to the left
             width: 80%;
             padding: 0;
+        }
+    }
+
+    &__btn {
+        display: flex;
+
+        @include tablet {
+            justify-content: flex-start;
+            font-size: 1rem;
+        }
+
+        @include laptop-desktop {
+            justify-content: flex-start;
+        }
+    }
+
+    &__btn-link {
+        text-decoration: none;
+        color: inherit;
+        font-weight: 600;
+    }
+
+    &__btn--contact {
+        @include button-style($green);
+        margin-top: 2rem;
+
+        @include tablet {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        @include laptop-desktop {
+            display: flex;
+            justify-content: flex-start;
         }
     }
 }
